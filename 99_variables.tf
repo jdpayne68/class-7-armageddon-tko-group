@@ -19,7 +19,7 @@ variable "vpc_cidr" {
 variable "ec2_ami_id" {
   description = "AMI ID for the EC2 app host."
   type        = string
-  default     = "ami-06f1fc9ae5ae7f31e" # "ami-07ff62358b87c7116" 
+  default     = "pick one"  
 }
 
 variable "ec2_instance_type" {
@@ -62,13 +62,13 @@ variable "db_password" {
 variable "sns_email_endpoint" {
   description = "Email for SNS subscription (PagerDuty simulation)."
   type        = string
-  default     = "hotbox.extinct962@passinbox.com" 
+  default     = "your@email.com" 
 }
 
 variable "domain_name" {
   description = "Base domain students registered."
   type        = string
-  default     = "librashift.com"
+  default     = "yourdomain.com"
 }
 
 variable "app_subdomain" {
@@ -157,4 +157,5 @@ variable "enable_waf_sampled_requests_only" {
   description = "If true, students can optionally filter/redact fields later. (Placeholder toggle.)"
   type        = bool
   default     = false
+
 }
