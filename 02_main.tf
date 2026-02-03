@@ -177,7 +177,7 @@ resource "aws_vpc_security_group_ingress_rule" "ec2_lab_http" {
 
 resource "aws_vpc_security_group_ingress_rule" "ec2_lab_ssh" {
   security_group_id = aws_security_group.ec2_lab_sg.id
-  cidr_ipv4         = "174.245.87.223/32" # var.my_ip_cidr # current 192.159.210.72/32 = east-1
+  cidr_ipv4         = var.my_ip_cidr 
   from_port         = 22
   ip_protocol       = "tcp"
   to_port           = 22
@@ -602,6 +602,7 @@ resource "aws_sns_topic_subscription" "db_incidents" {
   protocol  = "email"
   endpoint  = var.sns_email_endpoint
 }
+
 
 
 
