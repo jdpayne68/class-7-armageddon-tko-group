@@ -1,0 +1,824 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_acm_certificate.rds_app_cert" [label = "aws_acm_certificate.rds_app_cert", shape = "box"]
+		"[root] aws_acm_certificate.rds_app_cert (expand)" [label = "aws_acm_certificate.rds_app_cert", shape = "box"]
+		"[root] aws_acm_certificate_validation.rds_app_cert" [label = "aws_acm_certificate_validation.rds_app_cert", shape = "box"]
+		"[root] aws_acm_certificate_validation.rds_app_cert (expand)" [label = "aws_acm_certificate_validation.rds_app_cert", shape = "box"]
+		"[root] aws_autoscaling_attachment.rds_app_asg_tg_attachment" [label = "aws_autoscaling_attachment.rds_app_asg_tg_attachment", shape = "box"]
+		"[root] aws_autoscaling_attachment.rds_app_asg_tg_attachment (expand)" [label = "aws_autoscaling_attachment.rds_app_asg_tg_attachment", shape = "box"]
+		"[root] aws_autoscaling_group.rds_app_asg" [label = "aws_autoscaling_group.rds_app_asg", shape = "box"]
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" [label = "aws_autoscaling_group.rds_app_asg", shape = "box"]
+		"[root] aws_autoscaling_policy.rds_app_asg" [label = "aws_autoscaling_policy.rds_app_asg", shape = "box"]
+		"[root] aws_autoscaling_policy.rds_app_asg (expand)" [label = "aws_autoscaling_policy.rds_app_asg", shape = "box"]
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard" [label = "aws_cloudwatch_dashboard.rds_app_dashboard", shape = "box"]
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" [label = "aws_cloudwatch_dashboard.rds_app_dashboard", shape = "box"]
+		"[root] aws_cloudwatch_log_group.rds_app_alb_server_error" [label = "aws_cloudwatch_log_group.rds_app_alb_server_error", shape = "box"]
+		"[root] aws_cloudwatch_log_group.rds_app_alb_server_error (expand)" [label = "aws_cloudwatch_log_group.rds_app_alb_server_error", shape = "box"]
+		"[root] aws_cloudwatch_log_group.vpc_flow_log" [label = "aws_cloudwatch_log_group.vpc_flow_log", shape = "box"]
+		"[root] aws_cloudwatch_log_group.vpc_flow_log (expand)" [label = "aws_cloudwatch_log_group.vpc_flow_log", shape = "box"]
+		"[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure" [label = "aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure", shape = "box"]
+		"[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure (expand)" [label = "aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure", shape = "box"]
+		"[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error" [label = "aws_cloudwatch_log_metric_filter.rds_app_alb_server_error", shape = "box"]
+		"[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error (expand)" [label = "aws_cloudwatch_log_metric_filter.rds_app_alb_server_error", shape = "box"]
+		"[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure" [label = "aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure", shape = "box"]
+		"[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure (expand)" [label = "aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure" [label = "aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure (expand)" [label = "aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm" [label = "aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm (expand)" [label = "aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure" [label = "aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure (expand)" [label = "aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure", shape = "box"]
+		"[root] aws_db_event_subscription.rds_failure_events" [label = "aws_db_event_subscription.rds_failure_events", shape = "box"]
+		"[root] aws_db_event_subscription.rds_failure_events (expand)" [label = "aws_db_event_subscription.rds_failure_events", shape = "box"]
+		"[root] aws_db_instance.lab_mysql" [label = "aws_db_instance.lab_mysql", shape = "box"]
+		"[root] aws_db_instance.lab_mysql (expand)" [label = "aws_db_instance.lab_mysql", shape = "box"]
+		"[root] aws_db_parameter_group.lab_mysql_parameters" [label = "aws_db_parameter_group.lab_mysql_parameters", shape = "box"]
+		"[root] aws_db_parameter_group.lab_mysql_parameters (expand)" [label = "aws_db_parameter_group.lab_mysql_parameters", shape = "box"]
+		"[root] aws_db_subnet_group.lab_mysql" [label = "aws_db_subnet_group.lab_mysql", shape = "box"]
+		"[root] aws_db_subnet_group.lab_mysql (expand)" [label = "aws_db_subnet_group.lab_mysql", shape = "box"]
+		"[root] aws_flow_log.vpc" [label = "aws_flow_log.vpc", shape = "box"]
+		"[root] aws_flow_log.vpc (expand)" [label = "aws_flow_log.vpc", shape = "box"]
+		"[root] aws_iam_instance_profile.rds_app" [label = "aws_iam_instance_profile.rds_app", shape = "box"]
+		"[root] aws_iam_instance_profile.rds_app (expand)" [label = "aws_iam_instance_profile.rds_app", shape = "box"]
+		"[root] aws_iam_policy.ec2_cloudwatch_agent_role" [label = "aws_iam_policy.ec2_cloudwatch_agent_role", shape = "box"]
+		"[root] aws_iam_policy.ec2_cloudwatch_agent_role (expand)" [label = "aws_iam_policy.ec2_cloudwatch_agent_role", shape = "box"]
+		"[root] aws_iam_policy.ec2_linux_repo_access" [label = "aws_iam_policy.ec2_linux_repo_access", shape = "box"]
+		"[root] aws_iam_policy.ec2_linux_repo_access (expand)" [label = "aws_iam_policy.ec2_linux_repo_access", shape = "box"]
+		"[root] aws_iam_policy.rds_enhanced_monitoring_role" [label = "aws_iam_policy.rds_enhanced_monitoring_role", shape = "box"]
+		"[root] aws_iam_policy.rds_enhanced_monitoring_role (expand)" [label = "aws_iam_policy.rds_enhanced_monitoring_role", shape = "box"]
+		"[root] aws_iam_policy.read_cloudwatch_agent_config" [label = "aws_iam_policy.read_cloudwatch_agent_config", shape = "box"]
+		"[root] aws_iam_policy.read_cloudwatch_agent_config (expand)" [label = "aws_iam_policy.read_cloudwatch_agent_config", shape = "box"]
+		"[root] aws_iam_policy.read_db_host_parameter" [label = "aws_iam_policy.read_db_host_parameter", shape = "box"]
+		"[root] aws_iam_policy.read_db_host_parameter (expand)" [label = "aws_iam_policy.read_db_host_parameter", shape = "box"]
+		"[root] aws_iam_policy.read_db_name_parameter" [label = "aws_iam_policy.read_db_name_parameter", shape = "box"]
+		"[root] aws_iam_policy.read_db_name_parameter (expand)" [label = "aws_iam_policy.read_db_name_parameter", shape = "box"]
+		"[root] aws_iam_policy.read_db_port_parameter" [label = "aws_iam_policy.read_db_port_parameter", shape = "box"]
+		"[root] aws_iam_policy.read_db_port_parameter (expand)" [label = "aws_iam_policy.read_db_port_parameter", shape = "box"]
+		"[root] aws_iam_policy.read_db_secret" [label = "aws_iam_policy.read_db_secret", shape = "box"]
+		"[root] aws_iam_policy.read_db_secret (expand)" [label = "aws_iam_policy.read_db_secret", shape = "box"]
+		"[root] aws_iam_policy.read_db_username_parameter" [label = "aws_iam_policy.read_db_username_parameter", shape = "box"]
+		"[root] aws_iam_policy.read_db_username_parameter (expand)" [label = "aws_iam_policy.read_db_username_parameter", shape = "box"]
+		"[root] aws_iam_policy.ssm_agent_policy" [label = "aws_iam_policy.ssm_agent_policy", shape = "box"]
+		"[root] aws_iam_policy.ssm_agent_policy (expand)" [label = "aws_iam_policy.ssm_agent_policy", shape = "box"]
+		"[root] aws_iam_policy.vpc_flow_log_role" [label = "aws_iam_policy.vpc_flow_log_role", shape = "box"]
+		"[root] aws_iam_policy.vpc_flow_log_role (expand)" [label = "aws_iam_policy.vpc_flow_log_role", shape = "box"]
+		"[root] aws_iam_role.rds_app" [label = "aws_iam_role.rds_app", shape = "box"]
+		"[root] aws_iam_role.rds_app (expand)" [label = "aws_iam_role.rds_app", shape = "box"]
+		"[root] aws_iam_role.rds_enhanced_monitoring_role" [label = "aws_iam_role.rds_enhanced_monitoring_role", shape = "box"]
+		"[root] aws_iam_role.rds_enhanced_monitoring_role (expand)" [label = "aws_iam_role.rds_enhanced_monitoring_role", shape = "box"]
+		"[root] aws_iam_role.vpc_flow_log_role" [label = "aws_iam_role.vpc_flow_log_role", shape = "box"]
+		"[root] aws_iam_role.vpc_flow_log_role (expand)" [label = "aws_iam_role.vpc_flow_log_role", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_" [label = "aws_iam_role_policy_attachment.attach_", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_ (expand)" [label = "aws_iam_role_policy_attachment.attach_", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role" [label = "aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role (expand)" [label = "aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config" [label = "aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config (expand)" [label = "aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter" [label = "aws_iam_role_policy_attachment.attach_read_db_host_parameter", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter (expand)" [label = "aws_iam_role_policy_attachment.attach_read_db_host_parameter", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_name_parameter" [label = "aws_iam_role_policy_attachment.attach_read_db_name_parameter", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_name_parameter (expand)" [label = "aws_iam_role_policy_attachment.attach_read_db_name_parameter", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_port_parameter" [label = "aws_iam_role_policy_attachment.attach_read_db_port_parameter", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_port_parameter (expand)" [label = "aws_iam_role_policy_attachment.attach_read_db_port_parameter", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_secret" [label = "aws_iam_role_policy_attachment.attach_read_db_secret", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_secret (expand)" [label = "aws_iam_role_policy_attachment.attach_read_db_secret", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_username_parameter" [label = "aws_iam_role_policy_attachment.attach_read_db_username_parameter", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_read_db_username_parameter (expand)" [label = "aws_iam_role_policy_attachment.attach_read_db_username_parameter", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_ssm_agent_policy" [label = "aws_iam_role_policy_attachment.attach_ssm_agent_policy", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_ssm_agent_policy (expand)" [label = "aws_iam_role_policy_attachment.attach_ssm_agent_policy", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role" [label = "aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role (expand)" [label = "aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.ec2_linux_repo_access" [label = "aws_iam_role_policy_attachment.ec2_linux_repo_access", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.ec2_linux_repo_access (expand)" [label = "aws_iam_role_policy_attachment.ec2_linux_repo_access", shape = "box"]
+		"[root] aws_internet_gateway.main" [label = "aws_internet_gateway.main", shape = "box"]
+		"[root] aws_internet_gateway.main (expand)" [label = "aws_internet_gateway.main", shape = "box"]
+		"[root] aws_launch_template.rds_app_asg" [label = "aws_launch_template.rds_app_asg", shape = "box"]
+		"[root] aws_launch_template.rds_app_asg (expand)" [label = "aws_launch_template.rds_app_asg", shape = "box"]
+		"[root] aws_lb.rds_app_public_alb" [label = "aws_lb.rds_app_public_alb", shape = "box"]
+		"[root] aws_lb.rds_app_public_alb (expand)" [label = "aws_lb.rds_app_public_alb", shape = "box"]
+		"[root] aws_lb_listener.rds_app_http_80" [label = "aws_lb_listener.rds_app_http_80", shape = "box"]
+		"[root] aws_lb_listener.rds_app_http_80 (expand)" [label = "aws_lb_listener.rds_app_http_80", shape = "box"]
+		"[root] aws_lb_listener.rds_app_https_443" [label = "aws_lb_listener.rds_app_https_443", shape = "box"]
+		"[root] aws_lb_listener.rds_app_https_443 (expand)" [label = "aws_lb_listener.rds_app_https_443", shape = "box"]
+		"[root] aws_lb_target_group.rds_app_asg_tg" [label = "aws_lb_target_group.rds_app_asg_tg", shape = "box"]
+		"[root] aws_lb_target_group.rds_app_asg_tg (expand)" [label = "aws_lb_target_group.rds_app_asg_tg", shape = "box"]
+		"[root] aws_route53_record.rds_app_alias" [label = "aws_route53_record.rds_app_alias", shape = "box"]
+		"[root] aws_route53_record.rds_app_alias (expand)" [label = "aws_route53_record.rds_app_alias", shape = "box"]
+		"[root] aws_route53_record.rds_app_cert_validation (expand)" [label = "aws_route53_record.rds_app_cert_validation", shape = "box"]
+		"[root] aws_route53_record.rds_app_cert_validation[\"*.kirkdevsecops.com\"]" [label = "aws_route53_record.rds_app_cert_validation", shape = "box"]
+		"[root] aws_route53_record.rds_app_cert_validation[\"kirkdevsecops.com\"]" [label = "aws_route53_record.rds_app_cert_validation", shape = "box"]
+		"[root] aws_route_table.local" [label = "aws_route_table.local", shape = "box"]
+		"[root] aws_route_table.local (expand)" [label = "aws_route_table.local", shape = "box"]
+		"[root] aws_route_table.public" [label = "aws_route_table.public", shape = "box"]
+		"[root] aws_route_table.public (expand)" [label = "aws_route_table.public", shape = "box"]
+		"[root] aws_route_table_association.private_app_a" [label = "aws_route_table_association.private_app_a", shape = "box"]
+		"[root] aws_route_table_association.private_app_a (expand)" [label = "aws_route_table_association.private_app_a", shape = "box"]
+		"[root] aws_route_table_association.private_app_b" [label = "aws_route_table_association.private_app_b", shape = "box"]
+		"[root] aws_route_table_association.private_app_b (expand)" [label = "aws_route_table_association.private_app_b", shape = "box"]
+		"[root] aws_route_table_association.private_app_c" [label = "aws_route_table_association.private_app_c", shape = "box"]
+		"[root] aws_route_table_association.private_app_c (expand)" [label = "aws_route_table_association.private_app_c", shape = "box"]
+		"[root] aws_route_table_association.private_data_a" [label = "aws_route_table_association.private_data_a", shape = "box"]
+		"[root] aws_route_table_association.private_data_a (expand)" [label = "aws_route_table_association.private_data_a", shape = "box"]
+		"[root] aws_route_table_association.private_data_b" [label = "aws_route_table_association.private_data_b", shape = "box"]
+		"[root] aws_route_table_association.private_data_b (expand)" [label = "aws_route_table_association.private_data_b", shape = "box"]
+		"[root] aws_route_table_association.private_data_c" [label = "aws_route_table_association.private_data_c", shape = "box"]
+		"[root] aws_route_table_association.private_data_c (expand)" [label = "aws_route_table_association.private_data_c", shape = "box"]
+		"[root] aws_route_table_association.public_a" [label = "aws_route_table_association.public_a", shape = "box"]
+		"[root] aws_route_table_association.public_a (expand)" [label = "aws_route_table_association.public_a", shape = "box"]
+		"[root] aws_route_table_association.public_b" [label = "aws_route_table_association.public_b", shape = "box"]
+		"[root] aws_route_table_association.public_b (expand)" [label = "aws_route_table_association.public_b", shape = "box"]
+		"[root] aws_route_table_association.public_c" [label = "aws_route_table_association.public_c", shape = "box"]
+		"[root] aws_route_table_association.public_c (expand)" [label = "aws_route_table_association.public_c", shape = "box"]
+		"[root] aws_s3_bucket.terraform_bucket" [label = "aws_s3_bucket.terraform_bucket", shape = "box"]
+		"[root] aws_s3_bucket.terraform_bucket (expand)" [label = "aws_s3_bucket.terraform_bucket", shape = "box"]
+		"[root] aws_s3_bucket_policy.rds_app_alb_logs" [label = "aws_s3_bucket_policy.rds_app_alb_logs", shape = "box"]
+		"[root] aws_s3_bucket_policy.rds_app_alb_logs (expand)" [label = "aws_s3_bucket_policy.rds_app_alb_logs", shape = "box"]
+		"[root] aws_s3_bucket_server_side_encryption_configuration.terraform_bucket" [label = "aws_s3_bucket_server_side_encryption_configuration.terraform_bucket", shape = "box"]
+		"[root] aws_s3_bucket_server_side_encryption_configuration.terraform_bucket (expand)" [label = "aws_s3_bucket_server_side_encryption_configuration.terraform_bucket", shape = "box"]
+		"[root] aws_secretsmanager_secret.lab_rds_mysql" [label = "aws_secretsmanager_secret.lab_rds_mysql", shape = "box"]
+		"[root] aws_secretsmanager_secret.lab_rds_mysql (expand)" [label = "aws_secretsmanager_secret.lab_rds_mysql", shape = "box"]
+		"[root] aws_secretsmanager_secret_version.lab_rds_mysql" [label = "aws_secretsmanager_secret_version.lab_rds_mysql", shape = "box"]
+		"[root] aws_secretsmanager_secret_version.lab_rds_mysql (expand)" [label = "aws_secretsmanager_secret_version.lab_rds_mysql", shape = "box"]
+		"[root] aws_security_group.alb" [label = "aws_security_group.alb", shape = "box"]
+		"[root] aws_security_group.alb (expand)" [label = "aws_security_group.alb", shape = "box"]
+		"[root] aws_security_group.private_db" [label = "aws_security_group.private_db", shape = "box"]
+		"[root] aws_security_group.private_db (expand)" [label = "aws_security_group.private_db", shape = "box"]
+		"[root] aws_security_group.rds_app_asg" [label = "aws_security_group.rds_app_asg", shape = "box"]
+		"[root] aws_security_group.rds_app_asg (expand)" [label = "aws_security_group.rds_app_asg", shape = "box"]
+		"[root] aws_security_group.vpc_endpoints" [label = "aws_security_group.vpc_endpoints", shape = "box"]
+		"[root] aws_security_group.vpc_endpoints (expand)" [label = "aws_security_group.vpc_endpoints", shape = "box"]
+		"[root] aws_sns_topic.app_to_rds_connection_failure_alert" [label = "aws_sns_topic.app_to_rds_connection_failure_alert", shape = "box"]
+		"[root] aws_sns_topic.app_to_rds_connection_failure_alert (expand)" [label = "aws_sns_topic.app_to_rds_connection_failure_alert", shape = "box"]
+		"[root] aws_sns_topic.lab_mysql_auth_failure_alert" [label = "aws_sns_topic.lab_mysql_auth_failure_alert", shape = "box"]
+		"[root] aws_sns_topic.lab_mysql_auth_failure_alert (expand)" [label = "aws_sns_topic.lab_mysql_auth_failure_alert", shape = "box"]
+		"[root] aws_sns_topic.rds_app_alb_server_error_alert" [label = "aws_sns_topic.rds_app_alb_server_error_alert", shape = "box"]
+		"[root] aws_sns_topic.rds_app_alb_server_error_alert (expand)" [label = "aws_sns_topic.rds_app_alb_server_error_alert", shape = "box"]
+		"[root] aws_sns_topic.rds_failure_alert" [label = "aws_sns_topic.rds_failure_alert", shape = "box"]
+		"[root] aws_sns_topic.rds_failure_alert (expand)" [label = "aws_sns_topic.rds_failure_alert", shape = "box"]
+		"[root] aws_sns_topic_subscription.app_alb_server_error_email_alert" [label = "aws_sns_topic_subscription.app_alb_server_error_email_alert", shape = "box"]
+		"[root] aws_sns_topic_subscription.app_alb_server_error_email_alert (expand)" [label = "aws_sns_topic_subscription.app_alb_server_error_email_alert", shape = "box"]
+		"[root] aws_sns_topic_subscription.app_to_rds_connection_failure_email_alert" [label = "aws_sns_topic_subscription.app_to_rds_connection_failure_email_alert", shape = "box"]
+		"[root] aws_sns_topic_subscription.app_to_rds_connection_failure_email_alert (expand)" [label = "aws_sns_topic_subscription.app_to_rds_connection_failure_email_alert", shape = "box"]
+		"[root] aws_sns_topic_subscription.lab_mysql_auth_failure_email_alert" [label = "aws_sns_topic_subscription.lab_mysql_auth_failure_email_alert", shape = "box"]
+		"[root] aws_sns_topic_subscription.lab_mysql_auth_failure_email_alert (expand)" [label = "aws_sns_topic_subscription.lab_mysql_auth_failure_email_alert", shape = "box"]
+		"[root] aws_sns_topic_subscription.rds_failure_email_alert" [label = "aws_sns_topic_subscription.rds_failure_email_alert", shape = "box"]
+		"[root] aws_sns_topic_subscription.rds_failure_email_alert (expand)" [label = "aws_sns_topic_subscription.rds_failure_email_alert", shape = "box"]
+		"[root] aws_ssm_parameter.cloudwatch_agent_config" [label = "aws_ssm_parameter.cloudwatch_agent_config", shape = "box"]
+		"[root] aws_ssm_parameter.cloudwatch_agent_config (expand)" [label = "aws_ssm_parameter.cloudwatch_agent_config", shape = "box"]
+		"[root] aws_ssm_parameter.lab_mysql_db_host" [label = "aws_ssm_parameter.lab_mysql_db_host", shape = "box"]
+		"[root] aws_ssm_parameter.lab_mysql_db_host (expand)" [label = "aws_ssm_parameter.lab_mysql_db_host", shape = "box"]
+		"[root] aws_ssm_parameter.lab_mysql_db_name" [label = "aws_ssm_parameter.lab_mysql_db_name", shape = "box"]
+		"[root] aws_ssm_parameter.lab_mysql_db_name (expand)" [label = "aws_ssm_parameter.lab_mysql_db_name", shape = "box"]
+		"[root] aws_ssm_parameter.lab_mysql_db_port" [label = "aws_ssm_parameter.lab_mysql_db_port", shape = "box"]
+		"[root] aws_ssm_parameter.lab_mysql_db_port (expand)" [label = "aws_ssm_parameter.lab_mysql_db_port", shape = "box"]
+		"[root] aws_ssm_parameter.lab_mysql_db_username" [label = "aws_ssm_parameter.lab_mysql_db_username", shape = "box"]
+		"[root] aws_ssm_parameter.lab_mysql_db_username (expand)" [label = "aws_ssm_parameter.lab_mysql_db_username", shape = "box"]
+		"[root] aws_subnet.private_app_a" [label = "aws_subnet.private_app_a", shape = "box"]
+		"[root] aws_subnet.private_app_a (expand)" [label = "aws_subnet.private_app_a", shape = "box"]
+		"[root] aws_subnet.private_app_b" [label = "aws_subnet.private_app_b", shape = "box"]
+		"[root] aws_subnet.private_app_b (expand)" [label = "aws_subnet.private_app_b", shape = "box"]
+		"[root] aws_subnet.private_app_c" [label = "aws_subnet.private_app_c", shape = "box"]
+		"[root] aws_subnet.private_app_c (expand)" [label = "aws_subnet.private_app_c", shape = "box"]
+		"[root] aws_subnet.private_data_a" [label = "aws_subnet.private_data_a", shape = "box"]
+		"[root] aws_subnet.private_data_a (expand)" [label = "aws_subnet.private_data_a", shape = "box"]
+		"[root] aws_subnet.private_data_b" [label = "aws_subnet.private_data_b", shape = "box"]
+		"[root] aws_subnet.private_data_b (expand)" [label = "aws_subnet.private_data_b", shape = "box"]
+		"[root] aws_subnet.private_data_c" [label = "aws_subnet.private_data_c", shape = "box"]
+		"[root] aws_subnet.private_data_c (expand)" [label = "aws_subnet.private_data_c", shape = "box"]
+		"[root] aws_subnet.public_a" [label = "aws_subnet.public_a", shape = "box"]
+		"[root] aws_subnet.public_a (expand)" [label = "aws_subnet.public_a", shape = "box"]
+		"[root] aws_subnet.public_b" [label = "aws_subnet.public_b", shape = "box"]
+		"[root] aws_subnet.public_b (expand)" [label = "aws_subnet.public_b", shape = "box"]
+		"[root] aws_subnet.public_c" [label = "aws_subnet.public_c", shape = "box"]
+		"[root] aws_subnet.public_c (expand)" [label = "aws_subnet.public_c", shape = "box"]
+		"[root] aws_vpc.main" [label = "aws_vpc.main", shape = "box"]
+		"[root] aws_vpc.main (expand)" [label = "aws_vpc.main", shape = "box"]
+		"[root] aws_vpc_endpoint.ec2" [label = "aws_vpc_endpoint.ec2", shape = "box"]
+		"[root] aws_vpc_endpoint.ec2 (expand)" [label = "aws_vpc_endpoint.ec2", shape = "box"]
+		"[root] aws_vpc_endpoint.ec2_messages" [label = "aws_vpc_endpoint.ec2_messages", shape = "box"]
+		"[root] aws_vpc_endpoint.ec2_messages (expand)" [label = "aws_vpc_endpoint.ec2_messages", shape = "box"]
+		"[root] aws_vpc_endpoint.kms" [label = "aws_vpc_endpoint.kms", shape = "box"]
+		"[root] aws_vpc_endpoint.kms (expand)" [label = "aws_vpc_endpoint.kms", shape = "box"]
+		"[root] aws_vpc_endpoint.logs" [label = "aws_vpc_endpoint.logs", shape = "box"]
+		"[root] aws_vpc_endpoint.logs (expand)" [label = "aws_vpc_endpoint.logs", shape = "box"]
+		"[root] aws_vpc_endpoint.monitoring" [label = "aws_vpc_endpoint.monitoring", shape = "box"]
+		"[root] aws_vpc_endpoint.monitoring (expand)" [label = "aws_vpc_endpoint.monitoring", shape = "box"]
+		"[root] aws_vpc_endpoint.s3" [label = "aws_vpc_endpoint.s3", shape = "box"]
+		"[root] aws_vpc_endpoint.s3 (expand)" [label = "aws_vpc_endpoint.s3", shape = "box"]
+		"[root] aws_vpc_endpoint.secretsmanager" [label = "aws_vpc_endpoint.secretsmanager", shape = "box"]
+		"[root] aws_vpc_endpoint.secretsmanager (expand)" [label = "aws_vpc_endpoint.secretsmanager", shape = "box"]
+		"[root] aws_vpc_endpoint.ssm" [label = "aws_vpc_endpoint.ssm", shape = "box"]
+		"[root] aws_vpc_endpoint.ssm (expand)" [label = "aws_vpc_endpoint.ssm", shape = "box"]
+		"[root] aws_vpc_endpoint.ssm_messages" [label = "aws_vpc_endpoint.ssm_messages", shape = "box"]
+		"[root] aws_vpc_endpoint.ssm_messages (expand)" [label = "aws_vpc_endpoint.ssm_messages", shape = "box"]
+		"[root] aws_vpc_endpoint_route_table_association.s3_private_app_a" [label = "aws_vpc_endpoint_route_table_association.s3_private_app_a", shape = "box"]
+		"[root] aws_vpc_endpoint_route_table_association.s3_private_app_a (expand)" [label = "aws_vpc_endpoint_route_table_association.s3_private_app_a", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_internal_outbound_ipv4_rds_app_asg" [label = "aws_vpc_security_group_egress_rule.allow_all_internal_outbound_ipv4_rds_app_asg", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_internal_outbound_ipv4_rds_app_asg (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_internal_outbound_ipv4_rds_app_asg", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_from_vpc_endpoint" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_from_vpc_endpoint", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_from_vpc_endpoint (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_from_vpc_endpoint", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_db" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_db", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_db (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_db", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_internal_app_https_to_vpc_endpoint" [label = "aws_vpc_security_group_ingress_rule.allow_internal_app_https_to_vpc_endpoint", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_internal_app_https_to_vpc_endpoint (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_internal_app_https_to_vpc_endpoint", shape = "box"]
+		"[root] aws_wafv2_web_acl.rds_app" [label = "aws_wafv2_web_acl.rds_app", shape = "box"]
+		"[root] aws_wafv2_web_acl.rds_app (expand)" [label = "aws_wafv2_web_acl.rds_app", shape = "box"]
+		"[root] aws_wafv2_web_acl_association.rds_app_waf_alb" [label = "aws_wafv2_web_acl_association.rds_app_waf_alb", shape = "box"]
+		"[root] aws_wafv2_web_acl_association.rds_app_waf_alb (expand)" [label = "aws_wafv2_web_acl_association.rds_app_waf_alb", shape = "box"]
+		"[root] data.aws_ami.amazon_linux_2023 (expand)" [label = "data.aws_ami.amazon_linux_2023", shape = "box"]
+		"[root] data.aws_availability_zones.available (expand)" [label = "data.aws_availability_zones.available", shape = "box"]
+		"[root] data.aws_caller_identity.current_account (expand)" [label = "data.aws_caller_identity.current_account", shape = "box"]
+		"[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role" [label = "data.aws_iam_policy_document.ec2_cloudwatch_agent_role", shape = "box"]
+		"[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role (expand)" [label = "data.aws_iam_policy_document.ec2_cloudwatch_agent_role", shape = "box"]
+		"[root] data.aws_iam_policy_document.ec2_linux_repo_access (expand)" [label = "data.aws_iam_policy_document.ec2_linux_repo_access", shape = "box"]
+		"[root] data.aws_iam_policy_document.rds_app_alb_logs" [label = "data.aws_iam_policy_document.rds_app_alb_logs", shape = "box"]
+		"[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)" [label = "data.aws_iam_policy_document.rds_app_alb_logs", shape = "box"]
+		"[root] data.aws_iam_policy_document.rds_app_assume_role (expand)" [label = "data.aws_iam_policy_document.rds_app_assume_role", shape = "box"]
+		"[root] data.aws_iam_policy_document.rds_enhanced_monitoring_assume_role (expand)" [label = "data.aws_iam_policy_document.rds_enhanced_monitoring_assume_role", shape = "box"]
+		"[root] data.aws_iam_policy_document.rds_enhanced_monitoring_role (expand)" [label = "data.aws_iam_policy_document.rds_enhanced_monitoring_role", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_cloudwatch_agent_config" [label = "data.aws_iam_policy_document.read_cloudwatch_agent_config", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_cloudwatch_agent_config (expand)" [label = "data.aws_iam_policy_document.read_cloudwatch_agent_config", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_host_parameter" [label = "data.aws_iam_policy_document.read_db_host_parameter", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_host_parameter (expand)" [label = "data.aws_iam_policy_document.read_db_host_parameter", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_name_parameter" [label = "data.aws_iam_policy_document.read_db_name_parameter", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_name_parameter (expand)" [label = "data.aws_iam_policy_document.read_db_name_parameter", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_port_parameter" [label = "data.aws_iam_policy_document.read_db_port_parameter", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_port_parameter (expand)" [label = "data.aws_iam_policy_document.read_db_port_parameter", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_secret" [label = "data.aws_iam_policy_document.read_db_secret", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_secret (expand)" [label = "data.aws_iam_policy_document.read_db_secret", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_username_parameter" [label = "data.aws_iam_policy_document.read_db_username_parameter", shape = "box"]
+		"[root] data.aws_iam_policy_document.read_db_username_parameter (expand)" [label = "data.aws_iam_policy_document.read_db_username_parameter", shape = "box"]
+		"[root] data.aws_iam_policy_document.ssm_agent_policy (expand)" [label = "data.aws_iam_policy_document.ssm_agent_policy", shape = "box"]
+		"[root] data.aws_iam_policy_document.vpc_flow_log_assume_role (expand)" [label = "data.aws_iam_policy_document.vpc_flow_log_assume_role", shape = "box"]
+		"[root] data.aws_iam_policy_document.vpc_flow_log_role" [label = "data.aws_iam_policy_document.vpc_flow_log_role", shape = "box"]
+		"[root] data.aws_iam_policy_document.vpc_flow_log_role (expand)" [label = "data.aws_iam_policy_document.vpc_flow_log_role", shape = "box"]
+		"[root] data.aws_route53_zone.rds_app_zone (expand)" [label = "data.aws_route53_zone.rds_app_zone", shape = "box"]
+		"[root] local_file.asg_user_data" [label = "local_file.asg_user_data", shape = "box"]
+		"[root] local_file.asg_user_data (expand)" [label = "local_file.asg_user_data", shape = "box"]
+		"[root] local_file.cloudwatch_agent_config" [label = "local_file.cloudwatch_agent_config", shape = "box"]
+		"[root] local_file.cloudwatch_agent_config (expand)" [label = "local_file.cloudwatch_agent_config", shape = "box"]
+		"[root] local_file.ec2_user_data" [label = "local_file.ec2_user_data", shape = "box"]
+		"[root] local_file.ec2_user_data (expand)" [label = "local_file.ec2_user_data", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"]" [label = "provider[\"registry.terraform.io/hashicorp/local\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/random\"]" [label = "provider[\"registry.terraform.io/hashicorp/random\"]", shape = "diamond"]
+		"[root] random_id.bucket_suffix" [label = "random_id.bucket_suffix", shape = "box"]
+		"[root] random_id.bucket_suffix (expand)" [label = "random_id.bucket_suffix", shape = "box"]
+		"[root] random_integer.subnet_picker" [label = "random_integer.subnet_picker", shape = "box"]
+		"[root] random_integer.subnet_picker (expand)" [label = "random_integer.subnet_picker", shape = "box"]
+		"[root] random_password.db_password" [label = "random_password.db_password", shape = "box"]
+		"[root] random_password.db_password (expand)" [label = "random_password.db_password", shape = "box"]
+		"[root] random_string.suffix" [label = "random_string.suffix", shape = "box"]
+		"[root] random_string.suffix (expand)" [label = "random_string.suffix", shape = "box"]
+		"[root] var.application" [label = "var.application", shape = "note"]
+		"[root] var.env" [label = "var.env", shape = "note"]
+		"[root] var.region_choice" [label = "var.region_choice", shape = "note"]
+		"[root] var.region_map" [label = "var.region_map", shape = "note"]
+		"[root] var.vpc_cidr" [label = "var.vpc_cidr", shape = "note"]
+		"[root] aws_acm_certificate.rds_app_cert (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_acm_certificate.rds_app_cert" -> "[root] aws_acm_certificate.rds_app_cert (expand)"
+		"[root] aws_acm_certificate_validation.rds_app_cert (expand)" -> "[root] aws_route53_record.rds_app_cert_validation[\"*.kirkdevsecops.com\"]"
+		"[root] aws_acm_certificate_validation.rds_app_cert (expand)" -> "[root] aws_route53_record.rds_app_cert_validation[\"kirkdevsecops.com\"]"
+		"[root] aws_acm_certificate_validation.rds_app_cert" -> "[root] aws_acm_certificate_validation.rds_app_cert (expand)"
+		"[root] aws_autoscaling_attachment.rds_app_asg_tg_attachment (expand)" -> "[root] aws_autoscaling_group.rds_app_asg"
+		"[root] aws_autoscaling_attachment.rds_app_asg_tg_attachment" -> "[root] aws_autoscaling_attachment.rds_app_asg_tg_attachment (expand)"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_launch_template.rds_app_asg"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_lb_target_group.rds_app_asg_tg"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_vpc_endpoint.ec2"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_vpc_endpoint.ec2_messages"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_vpc_endpoint.logs"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_vpc_endpoint.s3"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_vpc_endpoint.secretsmanager"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_vpc_endpoint.ssm"
+		"[root] aws_autoscaling_group.rds_app_asg (expand)" -> "[root] aws_vpc_endpoint.ssm_messages"
+		"[root] aws_autoscaling_group.rds_app_asg" -> "[root] aws_autoscaling_group.rds_app_asg (expand)"
+		"[root] aws_autoscaling_policy.rds_app_asg (expand)" -> "[root] aws_autoscaling_group.rds_app_asg"
+		"[root] aws_autoscaling_policy.rds_app_asg" -> "[root] aws_autoscaling_policy.rds_app_asg (expand)"
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_autoscaling_group.rds_app_asg"
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure"
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm"
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure"
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_db_instance.lab_mysql"
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_lb.rds_app_public_alb"
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_wafv2_web_acl.rds_app"
+		"[root] aws_cloudwatch_dashboard.rds_app_dashboard" -> "[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)"
+		"[root] aws_cloudwatch_log_group.rds_app_alb_server_error (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_cloudwatch_log_group.rds_app_alb_server_error (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_cloudwatch_log_group.rds_app_alb_server_error" -> "[root] aws_cloudwatch_log_group.rds_app_alb_server_error (expand)"
+		"[root] aws_cloudwatch_log_group.vpc_flow_log (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_cloudwatch_log_group.vpc_flow_log (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_cloudwatch_log_group.vpc_flow_log" -> "[root] aws_cloudwatch_log_group.vpc_flow_log (expand)"
+		"[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure (expand)" -> "[root] aws_db_instance.lab_mysql"
+		"[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure" -> "[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure (expand)"
+		"[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error (expand)" -> "[root] aws_cloudwatch_log_group.rds_app_alb_server_error"
+		"[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error" -> "[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error (expand)"
+		"[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure (expand)" -> "[root] aws_cloudwatch_log_group.vpc_flow_log"
+		"[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure" -> "[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure (expand)"
+		"[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure (expand)" -> "[root] aws_sns_topic.lab_mysql_auth_failure_alert"
+		"[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure" -> "[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure (expand)"
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm (expand)" -> "[root] aws_sns_topic.rds_app_alb_server_error_alert"
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm" -> "[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm (expand)"
+		"[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure (expand)" -> "[root] aws_sns_topic.app_to_rds_connection_failure_alert"
+		"[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure" -> "[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure (expand)"
+		"[root] aws_db_event_subscription.rds_failure_events (expand)" -> "[root] aws_db_instance.lab_mysql"
+		"[root] aws_db_event_subscription.rds_failure_events (expand)" -> "[root] aws_sns_topic.rds_failure_alert"
+		"[root] aws_db_event_subscription.rds_failure_events" -> "[root] aws_db_event_subscription.rds_failure_events (expand)"
+		"[root] aws_db_instance.lab_mysql (expand)" -> "[root] aws_db_parameter_group.lab_mysql_parameters"
+		"[root] aws_db_instance.lab_mysql (expand)" -> "[root] aws_db_subnet_group.lab_mysql"
+		"[root] aws_db_instance.lab_mysql (expand)" -> "[root] aws_iam_role.rds_enhanced_monitoring_role"
+		"[root] aws_db_instance.lab_mysql (expand)" -> "[root] local.db_credentials (expand)"
+		"[root] aws_db_instance.lab_mysql (expand)" -> "[root] local.private_db_sg_id (expand)"
+		"[root] aws_db_instance.lab_mysql" -> "[root] aws_db_instance.lab_mysql (expand)"
+		"[root] aws_db_parameter_group.lab_mysql_parameters (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_db_parameter_group.lab_mysql_parameters" -> "[root] aws_db_parameter_group.lab_mysql_parameters (expand)"
+		"[root] aws_db_subnet_group.lab_mysql (expand)" -> "[root] local.private_data_subnets (expand)"
+		"[root] aws_db_subnet_group.lab_mysql" -> "[root] aws_db_subnet_group.lab_mysql (expand)"
+		"[root] aws_flow_log.vpc (expand)" -> "[root] aws_cloudwatch_log_group.vpc_flow_log"
+		"[root] aws_flow_log.vpc (expand)" -> "[root] aws_iam_role.vpc_flow_log_role"
+		"[root] aws_flow_log.vpc (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_flow_log.vpc" -> "[root] aws_flow_log.vpc (expand)"
+		"[root] aws_iam_instance_profile.rds_app (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_instance_profile.rds_app" -> "[root] aws_iam_instance_profile.rds_app (expand)"
+		"[root] aws_iam_policy.ec2_cloudwatch_agent_role (expand)" -> "[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role"
+		"[root] aws_iam_policy.ec2_cloudwatch_agent_role" -> "[root] aws_iam_policy.ec2_cloudwatch_agent_role (expand)"
+		"[root] aws_iam_policy.ec2_linux_repo_access (expand)" -> "[root] data.aws_iam_policy_document.ec2_linux_repo_access (expand)"
+		"[root] aws_iam_policy.ec2_linux_repo_access" -> "[root] aws_iam_policy.ec2_linux_repo_access (expand)"
+		"[root] aws_iam_policy.rds_enhanced_monitoring_role (expand)" -> "[root] data.aws_iam_policy_document.rds_enhanced_monitoring_role (expand)"
+		"[root] aws_iam_policy.rds_enhanced_monitoring_role (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_iam_policy.rds_enhanced_monitoring_role" -> "[root] aws_iam_policy.rds_enhanced_monitoring_role (expand)"
+		"[root] aws_iam_policy.read_cloudwatch_agent_config (expand)" -> "[root] data.aws_iam_policy_document.read_cloudwatch_agent_config"
+		"[root] aws_iam_policy.read_cloudwatch_agent_config" -> "[root] aws_iam_policy.read_cloudwatch_agent_config (expand)"
+		"[root] aws_iam_policy.read_db_host_parameter (expand)" -> "[root] data.aws_iam_policy_document.read_db_host_parameter"
+		"[root] aws_iam_policy.read_db_host_parameter" -> "[root] aws_iam_policy.read_db_host_parameter (expand)"
+		"[root] aws_iam_policy.read_db_name_parameter (expand)" -> "[root] data.aws_iam_policy_document.read_db_name_parameter"
+		"[root] aws_iam_policy.read_db_name_parameter" -> "[root] aws_iam_policy.read_db_name_parameter (expand)"
+		"[root] aws_iam_policy.read_db_port_parameter (expand)" -> "[root] data.aws_iam_policy_document.read_db_port_parameter"
+		"[root] aws_iam_policy.read_db_port_parameter" -> "[root] aws_iam_policy.read_db_port_parameter (expand)"
+		"[root] aws_iam_policy.read_db_secret (expand)" -> "[root] data.aws_iam_policy_document.read_db_secret"
+		"[root] aws_iam_policy.read_db_secret" -> "[root] aws_iam_policy.read_db_secret (expand)"
+		"[root] aws_iam_policy.read_db_username_parameter (expand)" -> "[root] data.aws_iam_policy_document.read_db_username_parameter"
+		"[root] aws_iam_policy.read_db_username_parameter" -> "[root] aws_iam_policy.read_db_username_parameter (expand)"
+		"[root] aws_iam_policy.ssm_agent_policy (expand)" -> "[root] data.aws_iam_policy_document.ssm_agent_policy (expand)"
+		"[root] aws_iam_policy.ssm_agent_policy" -> "[root] aws_iam_policy.ssm_agent_policy (expand)"
+		"[root] aws_iam_policy.vpc_flow_log_role (expand)" -> "[root] data.aws_iam_policy_document.vpc_flow_log_role"
+		"[root] aws_iam_policy.vpc_flow_log_role" -> "[root] aws_iam_policy.vpc_flow_log_role (expand)"
+		"[root] aws_iam_role.rds_app (expand)" -> "[root] data.aws_iam_policy_document.rds_app_assume_role (expand)"
+		"[root] aws_iam_role.rds_app (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_iam_role.rds_app" -> "[root] aws_iam_role.rds_app (expand)"
+		"[root] aws_iam_role.rds_enhanced_monitoring_role (expand)" -> "[root] data.aws_iam_policy_document.rds_enhanced_monitoring_assume_role (expand)"
+		"[root] aws_iam_role.rds_enhanced_monitoring_role (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_iam_role.rds_enhanced_monitoring_role" -> "[root] aws_iam_role.rds_enhanced_monitoring_role (expand)"
+		"[root] aws_iam_role.vpc_flow_log_role (expand)" -> "[root] data.aws_iam_policy_document.vpc_flow_log_assume_role (expand)"
+		"[root] aws_iam_role.vpc_flow_log_role (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_iam_role.vpc_flow_log_role" -> "[root] aws_iam_role.vpc_flow_log_role (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_ (expand)" -> "[root] aws_iam_policy.rds_enhanced_monitoring_role"
+		"[root] aws_iam_role_policy_attachment.attach_ (expand)" -> "[root] aws_iam_role.rds_enhanced_monitoring_role"
+		"[root] aws_iam_role_policy_attachment.attach_" -> "[root] aws_iam_role_policy_attachment.attach_ (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role (expand)" -> "[root] aws_iam_policy.ec2_cloudwatch_agent_role"
+		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role" -> "[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config (expand)" -> "[root] aws_iam_policy.read_cloudwatch_agent_config"
+		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config" -> "[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter (expand)" -> "[root] aws_iam_policy.read_db_host_parameter"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter" -> "[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_name_parameter (expand)" -> "[root] aws_iam_policy.read_db_name_parameter"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_name_parameter (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_name_parameter" -> "[root] aws_iam_role_policy_attachment.attach_read_db_name_parameter (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_port_parameter (expand)" -> "[root] aws_iam_policy.read_db_port_parameter"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_port_parameter (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_port_parameter" -> "[root] aws_iam_role_policy_attachment.attach_read_db_port_parameter (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_secret (expand)" -> "[root] aws_iam_policy.read_db_secret"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_secret (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_secret" -> "[root] aws_iam_role_policy_attachment.attach_read_db_secret (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_username_parameter (expand)" -> "[root] aws_iam_policy.read_db_username_parameter"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_username_parameter (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.attach_read_db_username_parameter" -> "[root] aws_iam_role_policy_attachment.attach_read_db_username_parameter (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_ssm_agent_policy (expand)" -> "[root] aws_iam_policy.ssm_agent_policy"
+		"[root] aws_iam_role_policy_attachment.attach_ssm_agent_policy (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.attach_ssm_agent_policy" -> "[root] aws_iam_role_policy_attachment.attach_ssm_agent_policy (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role (expand)" -> "[root] aws_iam_policy.vpc_flow_log_role"
+		"[root] aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role (expand)" -> "[root] aws_iam_role.vpc_flow_log_role"
+		"[root] aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role" -> "[root] aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role (expand)"
+		"[root] aws_iam_role_policy_attachment.ec2_linux_repo_access (expand)" -> "[root] aws_iam_policy.ec2_linux_repo_access"
+		"[root] aws_iam_role_policy_attachment.ec2_linux_repo_access (expand)" -> "[root] aws_iam_role.rds_app"
+		"[root] aws_iam_role_policy_attachment.ec2_linux_repo_access" -> "[root] aws_iam_role_policy_attachment.ec2_linux_repo_access (expand)"
+		"[root] aws_internet_gateway.main (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_internet_gateway.main" -> "[root] aws_internet_gateway.main (expand)"
+		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_instance_profile.rds_app"
+		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter"
+		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_role_policy_attachment.attach_read_db_name_parameter"
+		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_role_policy_attachment.attach_read_db_port_parameter"
+		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_role_policy_attachment.attach_read_db_secret"
+		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_role_policy_attachment.attach_read_db_username_parameter"
+		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_security_group.rds_app_asg"
+		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] local.rds_app_user_data (expand)"
+		"[root] aws_launch_template.rds_app_asg" -> "[root] aws_launch_template.rds_app_asg (expand)"
+		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] aws_s3_bucket.terraform_bucket"
+		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] aws_security_group.alb"
+		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] local.public_subnets (expand)"
+		"[root] aws_lb.rds_app_public_alb" -> "[root] aws_lb.rds_app_public_alb (expand)"
+		"[root] aws_lb_listener.rds_app_http_80 (expand)" -> "[root] aws_lb.rds_app_public_alb"
+		"[root] aws_lb_listener.rds_app_http_80" -> "[root] aws_lb_listener.rds_app_http_80 (expand)"
+		"[root] aws_lb_listener.rds_app_https_443 (expand)" -> "[root] aws_acm_certificate_validation.rds_app_cert"
+		"[root] aws_lb_listener.rds_app_https_443 (expand)" -> "[root] aws_lb.rds_app_public_alb"
+		"[root] aws_lb_listener.rds_app_https_443 (expand)" -> "[root] aws_lb_target_group.rds_app_asg_tg"
+		"[root] aws_lb_listener.rds_app_https_443" -> "[root] aws_lb_listener.rds_app_https_443 (expand)"
+		"[root] aws_lb_target_group.rds_app_asg_tg (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_lb_target_group.rds_app_asg_tg" -> "[root] aws_lb_target_group.rds_app_asg_tg (expand)"
+		"[root] aws_route53_record.rds_app_alias (expand)" -> "[root] aws_lb.rds_app_public_alb"
+		"[root] aws_route53_record.rds_app_alias (expand)" -> "[root] data.aws_route53_zone.rds_app_zone (expand)"
+		"[root] aws_route53_record.rds_app_alias" -> "[root] aws_route53_record.rds_app_alias (expand)"
+		"[root] aws_route53_record.rds_app_cert_validation (expand)" -> "[root] aws_acm_certificate.rds_app_cert"
+		"[root] aws_route53_record.rds_app_cert_validation (expand)" -> "[root] data.aws_route53_zone.rds_app_zone (expand)"
+		"[root] aws_route53_record.rds_app_cert_validation[\"*.kirkdevsecops.com\"]" -> "[root] aws_route53_record.rds_app_cert_validation (expand)"
+		"[root] aws_route53_record.rds_app_cert_validation[\"kirkdevsecops.com\"]" -> "[root] aws_route53_record.rds_app_cert_validation (expand)"
+		"[root] aws_route_table.local (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_route_table.local" -> "[root] aws_route_table.local (expand)"
+		"[root] aws_route_table.public (expand)" -> "[root] aws_internet_gateway.main"
+		"[root] aws_route_table.public" -> "[root] aws_route_table.public (expand)"
+		"[root] aws_route_table_association.private_app_a (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_app_a (expand)" -> "[root] aws_subnet.private_app_a"
+		"[root] aws_route_table_association.private_app_a" -> "[root] aws_route_table_association.private_app_a (expand)"
+		"[root] aws_route_table_association.private_app_b (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_app_b (expand)" -> "[root] aws_subnet.private_app_b"
+		"[root] aws_route_table_association.private_app_b" -> "[root] aws_route_table_association.private_app_b (expand)"
+		"[root] aws_route_table_association.private_app_c (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_app_c (expand)" -> "[root] aws_subnet.private_app_c"
+		"[root] aws_route_table_association.private_app_c" -> "[root] aws_route_table_association.private_app_c (expand)"
+		"[root] aws_route_table_association.private_data_a (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_data_a (expand)" -> "[root] aws_subnet.private_data_a"
+		"[root] aws_route_table_association.private_data_a" -> "[root] aws_route_table_association.private_data_a (expand)"
+		"[root] aws_route_table_association.private_data_b (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_data_b (expand)" -> "[root] aws_subnet.private_data_b"
+		"[root] aws_route_table_association.private_data_b" -> "[root] aws_route_table_association.private_data_b (expand)"
+		"[root] aws_route_table_association.private_data_c (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_data_c (expand)" -> "[root] aws_subnet.private_data_c"
+		"[root] aws_route_table_association.private_data_c" -> "[root] aws_route_table_association.private_data_c (expand)"
+		"[root] aws_route_table_association.public_a (expand)" -> "[root] aws_route_table.public"
+		"[root] aws_route_table_association.public_a (expand)" -> "[root] local.public_subnets (expand)"
+		"[root] aws_route_table_association.public_a" -> "[root] aws_route_table_association.public_a (expand)"
+		"[root] aws_route_table_association.public_b (expand)" -> "[root] aws_route_table.public"
+		"[root] aws_route_table_association.public_b (expand)" -> "[root] local.public_subnets (expand)"
+		"[root] aws_route_table_association.public_b" -> "[root] aws_route_table_association.public_b (expand)"
+		"[root] aws_route_table_association.public_c (expand)" -> "[root] aws_route_table.public"
+		"[root] aws_route_table_association.public_c (expand)" -> "[root] local.public_subnets (expand)"
+		"[root] aws_route_table_association.public_c" -> "[root] aws_route_table_association.public_c (expand)"
+		"[root] aws_s3_bucket.terraform_bucket (expand)" -> "[root] local.bucket_suffix (expand)"
+		"[root] aws_s3_bucket.terraform_bucket (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_s3_bucket.terraform_bucket" -> "[root] aws_s3_bucket.terraform_bucket (expand)"
+		"[root] aws_s3_bucket_policy.rds_app_alb_logs (expand)" -> "[root] data.aws_iam_policy_document.rds_app_alb_logs"
+		"[root] aws_s3_bucket_policy.rds_app_alb_logs" -> "[root] aws_s3_bucket_policy.rds_app_alb_logs (expand)"
+		"[root] aws_s3_bucket_server_side_encryption_configuration.terraform_bucket (expand)" -> "[root] aws_s3_bucket.terraform_bucket"
+		"[root] aws_s3_bucket_server_side_encryption_configuration.terraform_bucket" -> "[root] aws_s3_bucket_server_side_encryption_configuration.terraform_bucket (expand)"
+		"[root] aws_secretsmanager_secret.lab_rds_mysql (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_secretsmanager_secret.lab_rds_mysql (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_secretsmanager_secret.lab_rds_mysql" -> "[root] aws_secretsmanager_secret.lab_rds_mysql (expand)"
+		"[root] aws_secretsmanager_secret_version.lab_rds_mysql (expand)" -> "[root] aws_db_instance.lab_mysql"
+		"[root] aws_secretsmanager_secret_version.lab_rds_mysql (expand)" -> "[root] aws_secretsmanager_secret.lab_rds_mysql"
+		"[root] aws_secretsmanager_secret_version.lab_rds_mysql" -> "[root] aws_secretsmanager_secret_version.lab_rds_mysql (expand)"
+		"[root] aws_security_group.alb (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.alb" -> "[root] aws_security_group.alb (expand)"
+		"[root] aws_security_group.private_db (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_db" -> "[root] aws_security_group.private_db (expand)"
+		"[root] aws_security_group.rds_app_asg (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.rds_app_asg" -> "[root] aws_security_group.rds_app_asg (expand)"
+		"[root] aws_security_group.vpc_endpoints (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.vpc_endpoints" -> "[root] aws_security_group.vpc_endpoints (expand)"
+		"[root] aws_sns_topic.app_to_rds_connection_failure_alert (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_sns_topic.app_to_rds_connection_failure_alert" -> "[root] aws_sns_topic.app_to_rds_connection_failure_alert (expand)"
+		"[root] aws_sns_topic.lab_mysql_auth_failure_alert (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_sns_topic.lab_mysql_auth_failure_alert" -> "[root] aws_sns_topic.lab_mysql_auth_failure_alert (expand)"
+		"[root] aws_sns_topic.rds_app_alb_server_error_alert (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_sns_topic.rds_app_alb_server_error_alert" -> "[root] aws_sns_topic.rds_app_alb_server_error_alert (expand)"
+		"[root] aws_sns_topic.rds_failure_alert (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_sns_topic.rds_failure_alert" -> "[root] aws_sns_topic.rds_failure_alert (expand)"
+		"[root] aws_sns_topic_subscription.app_alb_server_error_email_alert (expand)" -> "[root] aws_sns_topic.rds_app_alb_server_error_alert"
+		"[root] aws_sns_topic_subscription.app_alb_server_error_email_alert" -> "[root] aws_sns_topic_subscription.app_alb_server_error_email_alert (expand)"
+		"[root] aws_sns_topic_subscription.app_to_rds_connection_failure_email_alert (expand)" -> "[root] aws_sns_topic.app_to_rds_connection_failure_alert"
+		"[root] aws_sns_topic_subscription.app_to_rds_connection_failure_email_alert" -> "[root] aws_sns_topic_subscription.app_to_rds_connection_failure_email_alert (expand)"
+		"[root] aws_sns_topic_subscription.lab_mysql_auth_failure_email_alert (expand)" -> "[root] aws_sns_topic.lab_mysql_auth_failure_alert"
+		"[root] aws_sns_topic_subscription.lab_mysql_auth_failure_email_alert" -> "[root] aws_sns_topic_subscription.lab_mysql_auth_failure_email_alert (expand)"
+		"[root] aws_sns_topic_subscription.rds_failure_email_alert (expand)" -> "[root] aws_sns_topic.rds_failure_alert"
+		"[root] aws_sns_topic_subscription.rds_failure_email_alert" -> "[root] aws_sns_topic_subscription.rds_failure_email_alert (expand)"
+		"[root] aws_ssm_parameter.cloudwatch_agent_config (expand)" -> "[root] local.cloudwatch_agent_config (expand)"
+		"[root] aws_ssm_parameter.cloudwatch_agent_config (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ssm_parameter.cloudwatch_agent_config" -> "[root] aws_ssm_parameter.cloudwatch_agent_config (expand)"
+		"[root] aws_ssm_parameter.lab_mysql_db_host (expand)" -> "[root] aws_db_instance.lab_mysql"
+		"[root] aws_ssm_parameter.lab_mysql_db_host" -> "[root] aws_ssm_parameter.lab_mysql_db_host (expand)"
+		"[root] aws_ssm_parameter.lab_mysql_db_name (expand)" -> "[root] aws_db_instance.lab_mysql"
+		"[root] aws_ssm_parameter.lab_mysql_db_name" -> "[root] aws_ssm_parameter.lab_mysql_db_name (expand)"
+		"[root] aws_ssm_parameter.lab_mysql_db_port (expand)" -> "[root] aws_db_instance.lab_mysql"
+		"[root] aws_ssm_parameter.lab_mysql_db_port" -> "[root] aws_ssm_parameter.lab_mysql_db_port (expand)"
+		"[root] aws_ssm_parameter.lab_mysql_db_username (expand)" -> "[root] local.db_credentials (expand)"
+		"[root] aws_ssm_parameter.lab_mysql_db_username (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_ssm_parameter.lab_mysql_db_username (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_ssm_parameter.lab_mysql_db_username" -> "[root] aws_ssm_parameter.lab_mysql_db_username (expand)"
+		"[root] aws_subnet.private_app_a (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_app_a (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.private_app_a (expand)" -> "[root] local.private_subnet_tags (expand)"
+		"[root] aws_subnet.private_app_a" -> "[root] aws_subnet.private_app_a (expand)"
+		"[root] aws_subnet.private_app_b (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_app_b (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.private_app_b (expand)" -> "[root] local.private_subnet_tags (expand)"
+		"[root] aws_subnet.private_app_b" -> "[root] aws_subnet.private_app_b (expand)"
+		"[root] aws_subnet.private_app_c (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_app_c (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.private_app_c (expand)" -> "[root] local.private_subnet_tags (expand)"
+		"[root] aws_subnet.private_app_c" -> "[root] aws_subnet.private_app_c (expand)"
+		"[root] aws_subnet.private_data_a (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_data_a (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.private_data_a (expand)" -> "[root] local.private_subnet_tags (expand)"
+		"[root] aws_subnet.private_data_a" -> "[root] aws_subnet.private_data_a (expand)"
+		"[root] aws_subnet.private_data_b (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_data_b (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.private_data_b (expand)" -> "[root] local.private_subnet_tags (expand)"
+		"[root] aws_subnet.private_data_b" -> "[root] aws_subnet.private_data_b (expand)"
+		"[root] aws_subnet.private_data_c (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_data_c (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.private_data_c (expand)" -> "[root] local.private_subnet_tags (expand)"
+		"[root] aws_subnet.private_data_c" -> "[root] aws_subnet.private_data_c (expand)"
+		"[root] aws_subnet.public_a (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.public_a (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.public_a (expand)" -> "[root] local.public_subnet_tags (expand)"
+		"[root] aws_subnet.public_a" -> "[root] aws_subnet.public_a (expand)"
+		"[root] aws_subnet.public_b (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.public_b (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.public_b (expand)" -> "[root] local.public_subnet_tags (expand)"
+		"[root] aws_subnet.public_b" -> "[root] aws_subnet.public_b (expand)"
+		"[root] aws_subnet.public_c (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.public_c (expand)" -> "[root] local.azs (expand)"
+		"[root] aws_subnet.public_c (expand)" -> "[root] local.public_subnet_tags (expand)"
+		"[root] aws_subnet.public_c" -> "[root] aws_subnet.public_c (expand)"
+		"[root] aws_vpc.main (expand)" -> "[root] local.vpc_cidr (expand)"
+		"[root] aws_vpc.main (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_vpc.main" -> "[root] aws_vpc.main (expand)"
+		"[root] aws_vpc_endpoint.ec2 (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_endpoint.ec2 (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] aws_vpc_endpoint.ec2" -> "[root] aws_vpc_endpoint.ec2 (expand)"
+		"[root] aws_vpc_endpoint.ec2_messages (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_endpoint.ec2_messages (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] aws_vpc_endpoint.ec2_messages" -> "[root] aws_vpc_endpoint.ec2_messages (expand)"
+		"[root] aws_vpc_endpoint.kms (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_endpoint.kms (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] aws_vpc_endpoint.kms" -> "[root] aws_vpc_endpoint.kms (expand)"
+		"[root] aws_vpc_endpoint.logs (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_endpoint.logs (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] aws_vpc_endpoint.logs" -> "[root] aws_vpc_endpoint.logs (expand)"
+		"[root] aws_vpc_endpoint.monitoring (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_endpoint.monitoring (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] aws_vpc_endpoint.monitoring" -> "[root] aws_vpc_endpoint.monitoring (expand)"
+		"[root] aws_vpc_endpoint.s3 (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_vpc_endpoint.s3 (expand)" -> "[root] local.private_subnet_tags (expand)"
+		"[root] aws_vpc_endpoint.s3" -> "[root] aws_vpc_endpoint.s3 (expand)"
+		"[root] aws_vpc_endpoint.secretsmanager (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_endpoint.secretsmanager (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] aws_vpc_endpoint.secretsmanager" -> "[root] aws_vpc_endpoint.secretsmanager (expand)"
+		"[root] aws_vpc_endpoint.ssm (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_endpoint.ssm (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] aws_vpc_endpoint.ssm" -> "[root] aws_vpc_endpoint.ssm (expand)"
+		"[root] aws_vpc_endpoint.ssm_messages (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_endpoint.ssm_messages (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] aws_vpc_endpoint.ssm_messages" -> "[root] aws_vpc_endpoint.ssm_messages (expand)"
+		"[root] aws_vpc_endpoint_route_table_association.s3_private_app_a (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_vpc_endpoint_route_table_association.s3_private_app_a (expand)" -> "[root] aws_vpc_endpoint.s3"
+		"[root] aws_vpc_endpoint_route_table_association.s3_private_app_a" -> "[root] aws_vpc_endpoint_route_table_association.s3_private_app_a (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_internal_outbound_ipv4_rds_app_asg (expand)" -> "[root] aws_security_group.rds_app_asg"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_internal_outbound_ipv4_rds_app_asg" -> "[root] aws_vpc_security_group_egress_rule.allow_all_internal_outbound_ipv4_rds_app_asg (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_from_vpc_endpoint (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_from_vpc_endpoint" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_from_vpc_endpoint (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_db (expand)" -> "[root] aws_security_group.private_db"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_db" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_db (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)" -> "[root] aws_security_group.alb"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)" -> "[root] aws_security_group.rds_app_asg"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb (expand)" -> "[root] aws_security_group.alb"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb (expand)" -> "[root] aws_security_group.alb"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app (expand)" -> "[root] aws_security_group.private_db"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app (expand)" -> "[root] aws_security_group.rds_app_asg"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg (expand)" -> "[root] aws_security_group.alb"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg (expand)" -> "[root] aws_security_group.rds_app_asg"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg (expand)" -> "[root] aws_security_group.alb"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg (expand)" -> "[root] aws_security_group.rds_app_asg"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_internal_app_https_to_vpc_endpoint (expand)" -> "[root] aws_security_group.vpc_endpoints"
+		"[root] aws_vpc_security_group_ingress_rule.allow_internal_app_https_to_vpc_endpoint" -> "[root] aws_vpc_security_group_ingress_rule.allow_internal_app_https_to_vpc_endpoint (expand)"
+		"[root] aws_wafv2_web_acl.rds_app (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] aws_wafv2_web_acl.rds_app (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_wafv2_web_acl.rds_app" -> "[root] aws_wafv2_web_acl.rds_app (expand)"
+		"[root] aws_wafv2_web_acl_association.rds_app_waf_alb (expand)" -> "[root] aws_lb.rds_app_public_alb"
+		"[root] aws_wafv2_web_acl_association.rds_app_waf_alb (expand)" -> "[root] aws_wafv2_web_acl.rds_app"
+		"[root] aws_wafv2_web_acl_association.rds_app_waf_alb" -> "[root] aws_wafv2_web_acl_association.rds_app_waf_alb (expand)"
+		"[root] data.aws_ami.amazon_linux_2023 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_availability_zones.available (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_caller_identity.current_account (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role (expand)" -> "[root] local.account_id (expand)"
+		"[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role" -> "[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role (expand)"
+		"[root] data.aws_iam_policy_document.ec2_linux_repo_access (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)" -> "[root] aws_s3_bucket.terraform_bucket"
+		"[root] data.aws_iam_policy_document.rds_app_alb_logs" -> "[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)"
+		"[root] data.aws_iam_policy_document.rds_app_assume_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.rds_enhanced_monitoring_assume_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.rds_enhanced_monitoring_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.read_cloudwatch_agent_config (expand)" -> "[root] local.account_id (expand)"
+		"[root] data.aws_iam_policy_document.read_cloudwatch_agent_config (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] data.aws_iam_policy_document.read_cloudwatch_agent_config" -> "[root] data.aws_iam_policy_document.read_cloudwatch_agent_config (expand)"
+		"[root] data.aws_iam_policy_document.read_db_host_parameter (expand)" -> "[root] local.account_id (expand)"
+		"[root] data.aws_iam_policy_document.read_db_host_parameter (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] data.aws_iam_policy_document.read_db_host_parameter" -> "[root] data.aws_iam_policy_document.read_db_host_parameter (expand)"
+		"[root] data.aws_iam_policy_document.read_db_name_parameter (expand)" -> "[root] local.account_id (expand)"
+		"[root] data.aws_iam_policy_document.read_db_name_parameter (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] data.aws_iam_policy_document.read_db_name_parameter" -> "[root] data.aws_iam_policy_document.read_db_name_parameter (expand)"
+		"[root] data.aws_iam_policy_document.read_db_port_parameter (expand)" -> "[root] local.account_id (expand)"
+		"[root] data.aws_iam_policy_document.read_db_port_parameter (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] data.aws_iam_policy_document.read_db_port_parameter" -> "[root] data.aws_iam_policy_document.read_db_port_parameter (expand)"
+		"[root] data.aws_iam_policy_document.read_db_secret (expand)" -> "[root] aws_secretsmanager_secret.lab_rds_mysql"
+		"[root] data.aws_iam_policy_document.read_db_secret" -> "[root] data.aws_iam_policy_document.read_db_secret (expand)"
+		"[root] data.aws_iam_policy_document.read_db_username_parameter (expand)" -> "[root] local.account_id (expand)"
+		"[root] data.aws_iam_policy_document.read_db_username_parameter (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] data.aws_iam_policy_document.read_db_username_parameter" -> "[root] data.aws_iam_policy_document.read_db_username_parameter (expand)"
+		"[root] data.aws_iam_policy_document.ssm_agent_policy (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.vpc_flow_log_assume_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.vpc_flow_log_role (expand)" -> "[root] aws_cloudwatch_log_group.vpc_flow_log"
+		"[root] data.aws_iam_policy_document.vpc_flow_log_role" -> "[root] data.aws_iam_policy_document.vpc_flow_log_role (expand)"
+		"[root] data.aws_route53_zone.rds_app_zone (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] local.account_id (expand)" -> "[root] data.aws_caller_identity.current_account (expand)"
+		"[root] local.alb_sg_id (expand)" -> "[root] aws_security_group.alb"
+		"[root] local.application (expand)" -> "[root] var.application"
+		"[root] local.azs (expand)" -> "[root] data.aws_availability_zones.available (expand)"
+		"[root] local.base_tags (expand)" -> "[root] local.environment (expand)"
+		"[root] local.bucket_suffix (expand)" -> "[root] random_id.bucket_suffix"
+		"[root] local.cloudwatch_agent_config (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] local.db_credentials (expand)" -> "[root] random_password.db_password"
+		"[root] local.environment (expand)" -> "[root] var.env (validation)"
+		"[root] local.name_prefix (expand)" -> "[root] local.application (expand)"
+		"[root] local.name_prefix (expand)" -> "[root] local.environment (expand)"
+		"[root] local.name_suffix (expand)" -> "[root] random_string.suffix"
+		"[root] local.private_app_subnet_cidrs (expand)" -> "[root] aws_subnet.private_app_a"
+		"[root] local.private_app_subnet_cidrs (expand)" -> "[root] aws_subnet.private_app_b"
+		"[root] local.private_app_subnet_cidrs (expand)" -> "[root] aws_subnet.private_app_c"
+		"[root] local.private_app_subnets (expand)" -> "[root] aws_subnet.private_app_a"
+		"[root] local.private_app_subnets (expand)" -> "[root] aws_subnet.private_app_b"
+		"[root] local.private_app_subnets (expand)" -> "[root] aws_subnet.private_app_c"
+		"[root] local.private_data_subnet_cidrs (expand)" -> "[root] aws_subnet.private_data_a"
+		"[root] local.private_data_subnet_cidrs (expand)" -> "[root] aws_subnet.private_data_b"
+		"[root] local.private_data_subnet_cidrs (expand)" -> "[root] aws_subnet.private_data_c"
+		"[root] local.private_data_subnets (expand)" -> "[root] aws_subnet.private_data_a"
+		"[root] local.private_data_subnets (expand)" -> "[root] aws_subnet.private_data_b"
+		"[root] local.private_data_subnets (expand)" -> "[root] aws_subnet.private_data_c"
+		"[root] local.private_db_sg_id (expand)" -> "[root] aws_security_group.private_db"
+		"[root] local.public_subnet_cidrs (expand)" -> "[root] aws_subnet.public_a"
+		"[root] local.public_subnet_cidrs (expand)" -> "[root] aws_subnet.public_b"
+		"[root] local.public_subnet_cidrs (expand)" -> "[root] aws_subnet.public_c"
+		"[root] local.public_subnets (expand)" -> "[root] aws_subnet.public_a"
+		"[root] local.public_subnets (expand)" -> "[root] aws_subnet.public_b"
+		"[root] local.public_subnets (expand)" -> "[root] aws_subnet.public_c"
+		"[root] local.random_private_app_subnet (expand)" -> "[root] local.subnet_index (expand)"
+		"[root] local.random_private_data_subnet (expand)" -> "[root] local.private_data_subnets (expand)"
+		"[root] local.random_private_data_subnet (expand)" -> "[root] local.subnet_index (expand)"
+		"[root] local.random_public_subnet (expand)" -> "[root] local.public_subnets (expand)"
+		"[root] local.random_public_subnet (expand)" -> "[root] local.subnet_index (expand)"
+		"[root] local.rds_app_asg_sg_id (expand)" -> "[root] aws_security_group.rds_app_asg"
+		"[root] local.rds_app_user_data (expand)" -> "[root] local.secret_id (expand)"
+		"[root] local.region (expand)" -> "[root] var.region_choice (validation)"
+		"[root] local.region (expand)" -> "[root] var.region_map"
+		"[root] local.secret_id (expand)" -> "[root] aws_secretsmanager_secret.lab_rds_mysql"
+		"[root] local.subnet_index (expand)" -> "[root] random_integer.subnet_picker"
+		"[root] local.vpc_cidr (expand)" -> "[root] var.vpc_cidr"
+		"[root] local_file.asg_user_data (expand)" -> "[root] local.rds_app_user_data (expand)"
+		"[root] local_file.asg_user_data (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"]"
+		"[root] local_file.asg_user_data" -> "[root] local_file.asg_user_data (expand)"
+		"[root] local_file.cloudwatch_agent_config (expand)" -> "[root] local.cloudwatch_agent_config (expand)"
+		"[root] local_file.cloudwatch_agent_config (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"]"
+		"[root] local_file.cloudwatch_agent_config" -> "[root] local_file.cloudwatch_agent_config (expand)"
+		"[root] local_file.ec2_user_data (expand)" -> "[root] local.rds_app_user_data (expand)"
+		"[root] local_file.ec2_user_data (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"]"
+		"[root] local_file.ec2_user_data" -> "[root] local_file.ec2_user_data (expand)"
+		"[root] output.application_name (expand)" -> "[root] var.application"
+		"[root] output.availability_zones (expand)" -> "[root] data.aws_availability_zones.available (expand)"
+		"[root] output.environment (expand)" -> "[root] local.environment (expand)"
+		"[root] output.rds_app_alb (expand)" -> "[root] aws_route53_record.rds_app_alias"
+		"[root] output.rds_info (expand)" -> "[root] aws_db_instance.lab_mysql"
+		"[root] output.rds_subnets (expand)" -> "[root] aws_db_subnet_group.lab_mysql"
+		"[root] output.region (expand)" -> "[root] local.region (expand)"
+		"[root] output.region_choice (expand)" -> "[root] var.region_choice (validation)"
+		"[root] output.vpc_info (expand)" -> "[root] aws_vpc.main"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_autoscaling_attachment.rds_app_asg_tg_attachment"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_autoscaling_policy.rds_app_asg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_dashboard.rds_app_dashboard"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_db_event_subscription.rds_failure_events"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_flow_log.vpc"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_ssm_agent_policy"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.ec2_linux_repo_access"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_lb_listener.rds_app_http_80"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_lb_listener.rds_app_https_443"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route53_record.rds_app_alias"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_b"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_c"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_data_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_data_b"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_data_c"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_b"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_c"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_policy.rds_app_alb_logs"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_server_side_encryption_configuration.terraform_bucket"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_secretsmanager_secret_version.lab_rds_mysql"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_sns_topic_subscription.app_alb_server_error_email_alert"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_sns_topic_subscription.app_to_rds_connection_failure_email_alert"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_sns_topic_subscription.lab_mysql_auth_failure_email_alert"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_sns_topic_subscription.rds_failure_email_alert"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_ssm_parameter.cloudwatch_agent_config"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_ssm_parameter.lab_mysql_db_host"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_ssm_parameter.lab_mysql_db_name"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_ssm_parameter.lab_mysql_db_port"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_ssm_parameter.lab_mysql_db_username"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_endpoint.kms"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_endpoint.monitoring"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_endpoint_route_table_association.s3_private_app_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_internal_outbound_ipv4_rds_app_asg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_from_vpc_endpoint"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_db"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_ec2_internal_app"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_internal_app_https_to_vpc_endpoint"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_wafv2_web_acl_association.rds_app_waf_alb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] local.application (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] local.environment (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] local.region (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)" -> "[root] local_file.asg_user_data"
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)" -> "[root] local_file.cloudwatch_agent_config"
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)" -> "[root] local_file.ec2_user_data"
+		"[root] provider[\"registry.terraform.io/hashicorp/random\"] (close)" -> "[root] random_id.bucket_suffix"
+		"[root] provider[\"registry.terraform.io/hashicorp/random\"] (close)" -> "[root] random_integer.subnet_picker"
+		"[root] provider[\"registry.terraform.io/hashicorp/random\"] (close)" -> "[root] random_password.db_password"
+		"[root] provider[\"registry.terraform.io/hashicorp/random\"] (close)" -> "[root] random_string.suffix"
+		"[root] random_id.bucket_suffix (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/random\"]"
+		"[root] random_id.bucket_suffix" -> "[root] random_id.bucket_suffix (expand)"
+		"[root] random_integer.subnet_picker (expand)" -> "[root] local.private_app_subnets (expand)"
+		"[root] random_integer.subnet_picker (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/random\"]"
+		"[root] random_integer.subnet_picker" -> "[root] random_integer.subnet_picker (expand)"
+		"[root] random_password.db_password (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/random\"]"
+		"[root] random_password.db_password" -> "[root] random_password.db_password (expand)"
+		"[root] random_string.suffix (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/random\"]"
+		"[root] random_string.suffix" -> "[root] random_string.suffix (expand)"
+		"[root] root" -> "[root] local.alb_sg_id (expand)"
+		"[root] root" -> "[root] local.base_tags (expand)"
+		"[root] root" -> "[root] local.name_prefix (expand)"
+		"[root] root" -> "[root] local.private_app_subnet_cidrs (expand)"
+		"[root] root" -> "[root] local.private_data_subnet_cidrs (expand)"
+		"[root] root" -> "[root] local.public_subnet_cidrs (expand)"
+		"[root] root" -> "[root] local.random_private_app_subnet (expand)"
+		"[root] root" -> "[root] local.random_private_data_subnet (expand)"
+		"[root] root" -> "[root] local.random_public_subnet (expand)"
+		"[root] root" -> "[root] local.rds_app_asg_sg_id (expand)"
+		"[root] root" -> "[root] local.vpc_endpoint_tags (expand)"
+		"[root] root" -> "[root] output.application_name (expand)"
+		"[root] root" -> "[root] output.availability_zones (expand)"
+		"[root] root" -> "[root] output.environment (expand)"
+		"[root] root" -> "[root] output.rds_app_alb (expand)"
+		"[root] root" -> "[root] output.rds_info (expand)"
+		"[root] root" -> "[root] output.rds_subnets (expand)"
+		"[root] root" -> "[root] output.region (expand)"
+		"[root] root" -> "[root] output.region_choice (expand)"
+		"[root] root" -> "[root] output.vpc_info (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/random\"] (close)"
+		"[root] var.env (validation)" -> "[root] var.env"
+		"[root] var.region_choice (validation)" -> "[root] var.region_choice"
+	}
+}
