@@ -1,6 +1,3 @@
-Absolutely — I can rewrite this so it reads like something *you* would publish, not something that sounds auto‑generated or overly formal. Here’s a cleaner, more natural version that still keeps things organized and professional without the “ChatGPT voice.”
-
----
 
 # Armageddon AWS Terraform Labs
 
