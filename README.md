@@ -40,15 +40,11 @@ These labs extend the original AWS setup with additional services, deployment au
 
 Below are links to full lab deliverables, documentation, and supporting materials:
 
-###  Lab 1A
-
- **https://docs.google.com/presentation/d/1UfRDSfNwgIVcux8Gj_pBdOwUH9RxWaoI00V2Yq_qQjQ/edit?usp=sharing**
+###  Lab 1A https://docs.google.com/presentation/d/1UfRDSfNwgIVcux8Gj_pBdOwUH9RxWaoI00V2Yq_qQjQ/edit?usp=sharing**
 
 ---
 
-###  Lab 1B
-
- **https://docs.google.com/presentation/d/1u7emdQNsOtnx855h7DXI44n61fFC5qldFH0S8_iF9js/edit?usp=sharing**
+###  Lab 1B https://docs.google.com/presentation/d/1u7emdQNsOtnx855h7DXI44n61fFC5qldFH0S8_iF9js/edit?usp=sharing**
 
 ---
 
