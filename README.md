@@ -1,7 +1,7 @@
 
 # Armageddon AWS Terraform Labs
 
-This repo holds the AWS infrastructure labs I built for the Armageddon project. Each lab walks through real cloud provisioning, automation, and deployment patterns using Terraform on AWS.
+This repo holds the AWS infrastructure labs I built for the Armageddon project. Each lab walks through real cloud provisioning, automation, and deployment patterns using Terraform on AWS. Note..lab2 and lab3 are in the folder 1c-bonusb
 
 ---
 
