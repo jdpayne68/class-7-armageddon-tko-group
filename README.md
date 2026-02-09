@@ -111,6 +111,4 @@ Before running Terraform, make sure:
 - Terraform workflows and patterns  
 - Real‑world DevOps deployment practices  
 
----
 
-If you want, I can also tighten the tone even further (more casual, more technical, more concise) or help reorganize the README into a more polished, portfolio‑ready format.
