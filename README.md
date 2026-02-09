@@ -61,7 +61,7 @@ Below are links to the full lab write‑ups, walkthroughs, and documentation.
 
 ---
 
-### **Lab 3**
+### **Lab 3** -- infrastructure done still a work in progress
 
 - Lab 3A — [https://docs.google.com/presentation/d/137ogLURE9_kVp_1AFt9BaFP_o4Gn47ySOjZ9DYhTTT8/edit?usp=sharing](https://docs.google.com/presentation/d/137ogLURE9_kVp_1AFt9BaFP_o4Gn47ySOjZ9DYhTTT8/edit?usp=sharing)  
 
