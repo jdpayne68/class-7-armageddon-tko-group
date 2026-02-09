@@ -1,0 +1,43 @@
+# CWL Group - VPC Traffic
+resource "aws_cloudwatch_log_group" "vpc_flow_log" {
+  name              = "vpc-flow-log-${local.name_suffix}"
+  retention_in_days = 1
+  tags = {
+    Name        = "vpc-flow-log"
+    App         = "${local.app}"
+    Environment = "${local.env}"
+    Component   = "logs-vpc"
+    Scope       = "logging-conectivity"
+    DataClass   = "confidential"
+  }
+}
+
+
+# CWL Group - RDS App ALB Logs
+resource "aws_cloudwatch_log_group" "rds_app_alb_server_error" {
+  name              = "rds-app-alb-server-error-${local.name_suffix}"
+  retention_in_days = 1
+
+  tags = {
+    Name        = "rds-app-alb-server-error"
+    App         = "${local.app}"
+    Environment = "${local.env}"
+    Component   = "logs-alb"
+    Scope       = "logging-backend"
+    DataClass   = "confidential"
+  }
+}
+
+# CWL Group - WAF Logs
+resource "aws_cloudwatch_log_group" "waf_logs" {
+  name              = "aws-waf-logs-${local.env}-network-telemetry"
+  retention_in_days = 1
+  tags = {
+    Name        = "waf-logs-network-telemetry"
+    App         = "${local.app}"
+    Environment = "${local.env}"
+    Component   = "logs-waf"
+    Scope       = "logging-security-edge"
+    DataClass   = "confidential"
+  }
+}
