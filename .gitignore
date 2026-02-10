@@ -1,0 +1,19 @@
+# Terraform state
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Secrets - NEVER commit these
+terraform.tfvars
+
+# SSH keys
+*.pem
+*.key
+
+# Gate script outputs
+gate_output_*.txt
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+# Copy this file to terraform.tfvars and fill in YOUR values
+# DO NOT commit terraform.tfvars to Git
+
+project_name       = "your-prefix"
+aws_region         = "ap-northeast-1"
+vpc_cidr           = "10.1.0.0/16"
+ec2_ami_id         = "ami-XXXXXXXXX"
+db_password        = "CHANGE_ME"
+db_username        = "admin"
+sns_email_endpoint = "your-email@example.com"
+domain_name        = "yourdomain.com"
