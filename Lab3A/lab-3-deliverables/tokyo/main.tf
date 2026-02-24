@@ -205,7 +205,9 @@ resource "aws_db_subnet_group" "shinjuku_db_subnet_group" {
 
 resource "aws_db_instance" "shinjuku_rds" {
   engine                 = "mysql"
-  engine_version         = "8.0"
+  engine_version         = "8.4"
+allow_major_version_upgrade = true
+
   instance_class         = "db.t3.micro"
   allocated_storage      = 20
   storage_encrypted      = true
