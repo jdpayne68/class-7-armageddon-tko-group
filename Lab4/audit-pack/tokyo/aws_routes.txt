@@ -1,0 +1,170 @@
+{
+    "RouteTables": [
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-0c3e6b59751ecc555",
+                    "RouteTableId": "rtb-057993a6997769ddc",
+                    "SubnetId": "subnet-0a643ae419be03c51",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                },
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-00776c4872f5d2125",
+                    "RouteTableId": "rtb-057993a6997769ddc",
+                    "SubnetId": "subnet-0a5842e0106af0e5e",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-057993a6997769ddc",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.10.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "10.20.0.0/16",
+                    "TransitGatewayId": "tgw-0c2bb4583fe0d21f4",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "GatewayId": "igw-0af4329c3700f10d3",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "shinjuku-public-rt"
+                }
+            ],
+            "VpcId": "vpc-00bba0e099d231c12",
+            "OwnerId": "533972479438"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": true,
+                    "RouteTableAssociationId": "rtbassoc-05458c4fc589a601b",
+                    "RouteTableId": "rtb-01c6f376fb59c775f",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-01c6f376fb59c775f",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.10.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "10.20.0.0/16",
+                    "TransitGatewayId": "tgw-0c2bb4583fe0d21f4",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-00bba0e099d231c12",
+            "OwnerId": "533972479438"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-018e1713c354ca715",
+                    "RouteTableId": "rtb-0d504b58c0bb11f7f",
+                    "SubnetId": "subnet-08dbee8036ea0b1a1",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                },
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-0fc89f4bb50745c39",
+                    "RouteTableId": "rtb-0d504b58c0bb11f7f",
+                    "SubnetId": "subnet-050363f3da5a2c14e",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-0d504b58c0bb11f7f",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.10.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "10.20.0.0/16",
+                    "TransitGatewayId": "tgw-0c2bb4583fe0d21f4",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "NatGatewayId": "nat-0f385394ada19a874",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "shinjuku-private-rt"
+                }
+            ],
+            "VpcId": "vpc-00bba0e099d231c12",
+            "OwnerId": "533972479438"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": true,
+                    "RouteTableAssociationId": "rtbassoc-05f45aa5a9534fa85",
+                    "RouteTableId": "rtb-01c52ec5b578453fa",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-01c52ec5b578453fa",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "172.31.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "GatewayId": "igw-087733cd94b24d059",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-0d39874d43c3cff2b",
+            "OwnerId": "533972479438"
+        }
+    ]
+}

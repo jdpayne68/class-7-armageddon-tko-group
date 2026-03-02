@@ -1,0 +1,2 @@
+NAME             REGION       IP_ADDRESS  IP_PROTOCOL  TARGET
+nihonmachi-fr01  us-central1  10.20.1.4   TCP          us-central1/targetHttpsProxies/nihonmachi-httpsproxy01

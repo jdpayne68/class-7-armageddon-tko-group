@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-03-02T00:37:27Z",
+  "project": "kamau-lab4-2026",
+  "region": "us-central1",
+  "checks": {
+    "mig_list": "NAME              LOCATION     SCOPE   BASE_INSTANCE_NAME  SIZE  TARGET_SIZE  INSTANCE_TEMPLATE                            AUTOSCALED\nnihonmachi-mig01  us-central1  region  nihonmachi-app      2     2            nihonmachi-tpl01-20260301211031877900000001  no",
+    "forwarding_rules": "NAME             REGION       IP_ADDRESS  IP_PROTOCOL  TARGET\nnihonmachi-fr01  us-central1  10.20.1.4   TCP          us-central1/targetHttpsProxies/nihonmachi-httpsproxy01",
+    "target_https_proxies": "NAME                     SSL_CERTIFICATES                              URL_MAP              REGION       CERTIFICATE_MAP\nnihonmachi-httpsproxy01  nihonmachi-cert01-20260301212109655400000001  nihonmachi-urlmap01  us-central1",
+    "backend_services": "NAME                  BACKENDS                                     PROTOCOL\nnihonmachi-backend01  us-central1/instanceGroups/nihonmachi-mig01  HTTPS",
+    "health_checks": "NAME             REGION       PROTOCOL\nnihonmachi-hc01  us-central1  HTTPS",
+    "firewall_rules": "NAME                               NETWORK           DIRECTION  PRIORITY  ALLOW                         DENY  DISABLED\ndefault-allow-icmp                 default           INGRESS    65534     icmp                                False\ndefault-allow-internal             default           INGRESS    65534     tcp:0-65535,udp:0-65535,icmp        False\ndefault-allow-rdp                  default           INGRESS    65534     tcp:3389                            False\ndefault-allow-ssh                  default           INGRESS    65534     tcp:22                              False\nnihonmachi-allow-hc01              nihonmachi-vpc01  INGRESS    1000      tcp:443                             False\nnihonmachi-allow-https-from-vpn01  nihonmachi-vpc01  INGRESS    1000      tcp:443                             False\nnihonmachi-allow-iap-ssh           nihonmachi-vpc01  INGRESS    1000      tcp:22                              False",
+    "vpn_tunnels": "NAME                 REGION       GATEWAY             PEER_ADDRESS\nnihonmachi-tunnel01  us-central1  nihonmachi-vpngw01  13.159.103.10\nnihonmachi-tunnel02  us-central1  nihonmachi-vpngw01  18.182.186.252",
+    "routers": "NAME                     REGION       NETWORK\nnihonmachi-bgp-router01  us-central1  nihonmachi-vpc01\nnihonmachi-router01      us-central1  nihonmachi-vpc01"
+  }
+}

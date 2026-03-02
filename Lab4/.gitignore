@@ -1,0 +1,17 @@
+# Terraform
+*.tfstate
+*.tfstate.backup
+*.tfstate.*.backup
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+
+# Python
+venv/
+__pycache__/
+
+# Sensitive
+lab4_notes.txt
+
+# Mac
+.DS_Store

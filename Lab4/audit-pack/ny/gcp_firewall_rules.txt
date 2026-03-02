@@ -1,0 +1,8 @@
+NAME                               NETWORK           DIRECTION  PRIORITY  ALLOW                         DENY  DISABLED
+default-allow-icmp                 default           INGRESS    65534     icmp                                False
+default-allow-internal             default           INGRESS    65534     tcp:0-65535,udp:0-65535,icmp        False
+default-allow-rdp                  default           INGRESS    65534     tcp:3389                            False
+default-allow-ssh                  default           INGRESS    65534     tcp:22                              False
+nihonmachi-allow-hc01              nihonmachi-vpc01  INGRESS    1000      tcp:443                             False
+nihonmachi-allow-https-from-vpn01  nihonmachi-vpc01  INGRESS    1000      tcp:443                             False
+nihonmachi-allow-iap-ssh           nihonmachi-vpc01  INGRESS    1000      tcp:22                              False
