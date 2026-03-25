@@ -1,4 +1,12 @@
-# Hosted Zone for RDS App
+# Conditional Hosted Zone Resource for RDS App
+resource "aws_route53_zone" "terraform_managed_zone" {
+  count = var.manage_route53_in_terraform ? 1 : 0
+
+  name = local.root_domain
+}
+
+
+# Hosted Zone Data for RDS App
 data "aws_route53_zone" "rds_app_zone" { # Use data if the zone already exists. Use resource if you want to create a new zone.
   name         = local.root_domain
   private_zone = false
@@ -19,12 +27,12 @@ resource "aws_route53_record" "rds_app_cert_validation" {
   records         = [each.value.record]
   ttl             = 60
   type            = each.value.type
-  zone_id         = data.aws_route53_zone.rds_app_zone.id
+  zone_id         = data.aws_route53_zone.rds_app_zone.zone_id
 }
 
-# A record for RDS App on Sub Domain
+# Alias record for RDS App on Sub Domain
 resource "aws_route53_record" "rds_app_alias" {
-  zone_id = data.aws_route53_zone.rds_app_zone.id
+  zone_id = data.aws_route53_zone.rds_app_zone.zone_id
   name    = local.fqdn
   type    = "A"
 
@@ -35,7 +43,7 @@ resource "aws_route53_record" "rds_app_alias" {
   }
 }
 
-# A record for RDS App on Apex Domain
+# Alias record for RDS App on Apex Domain
 resource "aws_route53_record" "rds_app_apex_alias" {
   zone_id = data.aws_route53_zone.rds_app_zone.zone_id
   name    = local.root_domain

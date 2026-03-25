@@ -18,12 +18,11 @@ digraph {
 		"[root] aws_cloudwatch_log_group.rds_app_alb_server_error (expand)" [label = "aws_cloudwatch_log_group.rds_app_alb_server_error", shape = "box"]
 		"[root] aws_cloudwatch_log_group.vpc_flow_log" [label = "aws_cloudwatch_log_group.vpc_flow_log", shape = "box"]
 		"[root] aws_cloudwatch_log_group.vpc_flow_log (expand)" [label = "aws_cloudwatch_log_group.vpc_flow_log", shape = "box"]
-		"[root] aws_cloudwatch_log_group.waf_logs" [label = "aws_cloudwatch_log_group.waf_logs", shape = "box"]
+		"[root] aws_cloudwatch_log_group.waf_firehose_logs (expand)" [label = "aws_cloudwatch_log_group.waf_firehose_logs", shape = "box"]
+		"[root] aws_cloudwatch_log_group.waf_firehose_logs[0]" [label = "aws_cloudwatch_log_group.waf_firehose_logs", shape = "box"]
 		"[root] aws_cloudwatch_log_group.waf_logs (expand)" [label = "aws_cloudwatch_log_group.waf_logs", shape = "box"]
 		"[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure" [label = "aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure", shape = "box"]
 		"[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure (expand)" [label = "aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure", shape = "box"]
-		"[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error" [label = "aws_cloudwatch_log_metric_filter.rds_app_alb_server_error", shape = "box"]
-		"[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error (expand)" [label = "aws_cloudwatch_log_metric_filter.rds_app_alb_server_error", shape = "box"]
 		"[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure" [label = "aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure", shape = "box"]
 		"[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure (expand)" [label = "aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure", shape = "box"]
 		"[root] aws_cloudwatch_log_resource_policy.waf_direct (expand)" [label = "aws_cloudwatch_log_resource_policy.waf_direct", shape = "box"]
@@ -31,6 +30,8 @@ digraph {
 		"[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure (expand)" [label = "aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure", shape = "box"]
 		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm" [label = "aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm", shape = "box"]
 		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm (expand)" [label = "aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm" [label = "aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm", shape = "box"]
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm (expand)" [label = "aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm", shape = "box"]
 		"[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure" [label = "aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure", shape = "box"]
 		"[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure (expand)" [label = "aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure", shape = "box"]
 		"[root] aws_db_event_subscription.rds_failure_events" [label = "aws_db_event_subscription.rds_failure_events", shape = "box"]
@@ -49,14 +50,10 @@ digraph {
 		"[root] aws_iam_policy.ec2_cloudwatch_agent_role (expand)" [label = "aws_iam_policy.ec2_cloudwatch_agent_role", shape = "box"]
 		"[root] aws_iam_policy.ec2_linux_repo_access" [label = "aws_iam_policy.ec2_linux_repo_access", shape = "box"]
 		"[root] aws_iam_policy.ec2_linux_repo_access (expand)" [label = "aws_iam_policy.ec2_linux_repo_access", shape = "box"]
-		"[root] aws_iam_policy.firehose_network_telemetry_invoke_lambda" [label = "aws_iam_policy.firehose_network_telemetry_invoke_lambda", shape = "box"]
-		"[root] aws_iam_policy.firehose_network_telemetry_invoke_lambda (expand)" [label = "aws_iam_policy.firehose_network_telemetry_invoke_lambda", shape = "box"]
-		"[root] aws_iam_policy.firehose_network_telemetry_logs" [label = "aws_iam_policy.firehose_network_telemetry_logs", shape = "box"]
 		"[root] aws_iam_policy.firehose_network_telemetry_logs (expand)" [label = "aws_iam_policy.firehose_network_telemetry_logs", shape = "box"]
+		"[root] aws_iam_policy.firehose_network_telemetry_logs[0]" [label = "aws_iam_policy.firehose_network_telemetry_logs", shape = "box"]
 		"[root] aws_iam_policy.lambda_firehose_network_telemetry_logs" [label = "aws_iam_policy.lambda_firehose_network_telemetry_logs", shape = "box"]
 		"[root] aws_iam_policy.lambda_firehose_network_telemetry_logs (expand)" [label = "aws_iam_policy.lambda_firehose_network_telemetry_logs", shape = "box"]
-		"[root] aws_iam_policy.lambda_firehose_network_telemetry_s3_etl" [label = "aws_iam_policy.lambda_firehose_network_telemetry_s3_etl", shape = "box"]
-		"[root] aws_iam_policy.lambda_firehose_network_telemetry_s3_etl (expand)" [label = "aws_iam_policy.lambda_firehose_network_telemetry_s3_etl", shape = "box"]
 		"[root] aws_iam_policy.rds_enhanced_monitoring_role" [label = "aws_iam_policy.rds_enhanced_monitoring_role", shape = "box"]
 		"[root] aws_iam_policy.rds_enhanced_monitoring_role (expand)" [label = "aws_iam_policy.rds_enhanced_monitoring_role", shape = "box"]
 		"[root] aws_iam_policy.read_cloudwatch_agent_config" [label = "aws_iam_policy.read_cloudwatch_agent_config", shape = "box"]
@@ -75,10 +72,8 @@ digraph {
 		"[root] aws_iam_policy.ssm_agent_policy (expand)" [label = "aws_iam_policy.ssm_agent_policy", shape = "box"]
 		"[root] aws_iam_policy.vpc_flow_log_role" [label = "aws_iam_policy.vpc_flow_log_role", shape = "box"]
 		"[root] aws_iam_policy.vpc_flow_log_role (expand)" [label = "aws_iam_policy.vpc_flow_log_role", shape = "box"]
-		"[root] aws_iam_role.firehose_network_telemetry_role" [label = "aws_iam_role.firehose_network_telemetry_role", shape = "box"]
 		"[root] aws_iam_role.firehose_network_telemetry_role (expand)" [label = "aws_iam_role.firehose_network_telemetry_role", shape = "box"]
-		"[root] aws_iam_role.lambda_firehose_network_telemetry_processor_role" [label = "aws_iam_role.lambda_firehose_network_telemetry_processor_role", shape = "box"]
-		"[root] aws_iam_role.lambda_firehose_network_telemetry_processor_role (expand)" [label = "aws_iam_role.lambda_firehose_network_telemetry_processor_role", shape = "box"]
+		"[root] aws_iam_role.firehose_network_telemetry_role[0]" [label = "aws_iam_role.firehose_network_telemetry_role", shape = "box"]
 		"[root] aws_iam_role.rds_app" [label = "aws_iam_role.rds_app", shape = "box"]
 		"[root] aws_iam_role.rds_app (expand)" [label = "aws_iam_role.rds_app", shape = "box"]
 		"[root] aws_iam_role.rds_enhanced_monitoring_role" [label = "aws_iam_role.rds_enhanced_monitoring_role", shape = "box"]
@@ -89,14 +84,8 @@ digraph {
 		"[root] aws_iam_role_policy_attachment.attach_ (expand)" [label = "aws_iam_role_policy_attachment.attach_", shape = "box"]
 		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role" [label = "aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role", shape = "box"]
 		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role (expand)" [label = "aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role", shape = "box"]
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda" [label = "aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda", shape = "box"]
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda (expand)" [label = "aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda", shape = "box"]
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs" [label = "aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs", shape = "box"]
 		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs (expand)" [label = "aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs", shape = "box"]
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs" [label = "aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs", shape = "box"]
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs (expand)" [label = "aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs", shape = "box"]
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_s3_etl" [label = "aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_s3_etl", shape = "box"]
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_s3_etl (expand)" [label = "aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_s3_etl", shape = "box"]
+		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs[0]" [label = "aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs", shape = "box"]
 		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config" [label = "aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config", shape = "box"]
 		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config (expand)" [label = "aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config", shape = "box"]
 		"[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter" [label = "aws_iam_role_policy_attachment.attach_read_db_host_parameter", shape = "box"]
@@ -117,12 +106,8 @@ digraph {
 		"[root] aws_iam_role_policy_attachment.ec2_linux_repo_access (expand)" [label = "aws_iam_role_policy_attachment.ec2_linux_repo_access", shape = "box"]
 		"[root] aws_internet_gateway.main" [label = "aws_internet_gateway.main", shape = "box"]
 		"[root] aws_internet_gateway.main (expand)" [label = "aws_internet_gateway.main", shape = "box"]
-		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry" [label = "aws_kinesis_firehose_delivery_stream.network_telemetry", shape = "box"]
 		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)" [label = "aws_kinesis_firehose_delivery_stream.network_telemetry", shape = "box"]
-		"[root] aws_lambda_function.lambda_firehose_network_telemetry_processor" [label = "aws_lambda_function.lambda_firehose_network_telemetry_processor", shape = "box"]
-		"[root] aws_lambda_function.lambda_firehose_network_telemetry_processor (expand)" [label = "aws_lambda_function.lambda_firehose_network_telemetry_processor", shape = "box"]
-		"[root] aws_lambda_permission.allow_firehose_invoke" [label = "aws_lambda_permission.allow_firehose_invoke", shape = "box"]
-		"[root] aws_lambda_permission.allow_firehose_invoke (expand)" [label = "aws_lambda_permission.allow_firehose_invoke", shape = "box"]
+		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry[0]" [label = "aws_kinesis_firehose_delivery_stream.network_telemetry", shape = "box"]
 		"[root] aws_launch_template.rds_app_asg" [label = "aws_launch_template.rds_app_asg", shape = "box"]
 		"[root] aws_launch_template.rds_app_asg (expand)" [label = "aws_launch_template.rds_app_asg", shape = "box"]
 		"[root] aws_lb.rds_app_public_alb" [label = "aws_lb.rds_app_public_alb", shape = "box"]
@@ -140,6 +125,7 @@ digraph {
 		"[root] aws_route53_record.rds_app_cert_validation (expand)" [label = "aws_route53_record.rds_app_cert_validation", shape = "box"]
 		"[root] aws_route53_record.rds_app_cert_validation[\"*.kirkdevsecops.com\"]" [label = "aws_route53_record.rds_app_cert_validation", shape = "box"]
 		"[root] aws_route53_record.rds_app_cert_validation[\"kirkdevsecops.com\"]" [label = "aws_route53_record.rds_app_cert_validation", shape = "box"]
+		"[root] aws_route53_zone.terraform_managed_zone (expand)" [label = "aws_route53_zone.terraform_managed_zone", shape = "box"]
 		"[root] aws_route_table.local" [label = "aws_route_table.local", shape = "box"]
 		"[root] aws_route_table.local (expand)" [label = "aws_route_table.local", shape = "box"]
 		"[root] aws_route_table.public" [label = "aws_route_table.public", shape = "box"]
@@ -162,19 +148,19 @@ digraph {
 		"[root] aws_route_table_association.public_b (expand)" [label = "aws_route_table_association.public_b", shape = "box"]
 		"[root] aws_route_table_association.public_c" [label = "aws_route_table_association.public_c", shape = "box"]
 		"[root] aws_route_table_association.public_c (expand)" [label = "aws_route_table_association.public_c", shape = "box"]
-		"[root] aws_s3_bucket.alb_logs_bucket" [label = "aws_s3_bucket.alb_logs_bucket", shape = "box"]
 		"[root] aws_s3_bucket.alb_logs_bucket (expand)" [label = "aws_s3_bucket.alb_logs_bucket", shape = "box"]
-		"[root] aws_s3_bucket.waf_firehose_logs" [label = "aws_s3_bucket.waf_firehose_logs", shape = "box"]
+		"[root] aws_s3_bucket.alb_logs_bucket[0]" [label = "aws_s3_bucket.alb_logs_bucket", shape = "box"]
 		"[root] aws_s3_bucket.waf_firehose_logs (expand)" [label = "aws_s3_bucket.waf_firehose_logs", shape = "box"]
+		"[root] aws_s3_bucket.waf_firehose_logs[0]" [label = "aws_s3_bucket.waf_firehose_logs", shape = "box"]
 		"[root] aws_s3_bucket.waf_logs_bucket (expand)" [label = "aws_s3_bucket.waf_logs_bucket", shape = "box"]
-		"[root] aws_s3_bucket_policy.rds_app_alb_logs" [label = "aws_s3_bucket_policy.rds_app_alb_logs", shape = "box"]
 		"[root] aws_s3_bucket_policy.rds_app_alb_logs (expand)" [label = "aws_s3_bucket_policy.rds_app_alb_logs", shape = "box"]
-		"[root] aws_s3_bucket_policy.waf_firehose_logs" [label = "aws_s3_bucket_policy.waf_firehose_logs", shape = "box"]
+		"[root] aws_s3_bucket_policy.rds_app_alb_logs[0]" [label = "aws_s3_bucket_policy.rds_app_alb_logs", shape = "box"]
 		"[root] aws_s3_bucket_policy.waf_firehose_logs (expand)" [label = "aws_s3_bucket_policy.waf_firehose_logs", shape = "box"]
-		"[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket" [label = "aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket", shape = "box"]
+		"[root] aws_s3_bucket_policy.waf_firehose_logs[0]" [label = "aws_s3_bucket_policy.waf_firehose_logs", shape = "box"]
 		"[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket (expand)" [label = "aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket", shape = "box"]
-		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs" [label = "aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs", shape = "box"]
+		"[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket[0]" [label = "aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket", shape = "box"]
 		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs (expand)" [label = "aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs", shape = "box"]
+		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs[0]" [label = "aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs", shape = "box"]
 		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_logs_bucket (expand)" [label = "aws_s3_bucket_server_side_encryption_configuration.waf_logs_bucket", shape = "box"]
 		"[root] aws_secretsmanager_secret.lab_rds_mysql" [label = "aws_secretsmanager_secret.lab_rds_mysql", shape = "box"]
 		"[root] aws_secretsmanager_secret.lab_rds_mysql (expand)" [label = "aws_secretsmanager_secret.lab_rds_mysql", shape = "box"]
@@ -281,7 +267,6 @@ digraph {
 		"[root] aws_wafv2_web_acl_logging_configuration.rds_app_waf_direct (expand)" [label = "aws_wafv2_web_acl_logging_configuration.rds_app_waf_direct", shape = "box"]
 		"[root] aws_wafv2_web_acl_logging_configuration.rds_app_waf_firehose (expand)" [label = "aws_wafv2_web_acl_logging_configuration.rds_app_waf_firehose", shape = "box"]
 		"[root] aws_wafv2_web_acl_logging_configuration.rds_app_waf_firehose[0]" [label = "aws_wafv2_web_acl_logging_configuration.rds_app_waf_firehose", shape = "box"]
-		"[root] data.archive_file.lambda_firehose_processor (expand)" [label = "data.archive_file.lambda_firehose_processor", shape = "box"]
 		"[root] data.aws_ami.amazon_linux_2023 (expand)" [label = "data.aws_ami.amazon_linux_2023", shape = "box"]
 		"[root] data.aws_availability_zones.available (expand)" [label = "data.aws_availability_zones.available", shape = "box"]
 		"[root] data.aws_caller_identity.current (expand)" [label = "data.aws_caller_identity.current", shape = "box"]
@@ -289,15 +274,11 @@ digraph {
 		"[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role (expand)" [label = "data.aws_iam_policy_document.ec2_cloudwatch_agent_role", shape = "box"]
 		"[root] data.aws_iam_policy_document.ec2_linux_repo_access (expand)" [label = "data.aws_iam_policy_document.ec2_linux_repo_access", shape = "box"]
 		"[root] data.aws_iam_policy_document.firehose_network_telemetry_assume_role (expand)" [label = "data.aws_iam_policy_document.firehose_network_telemetry_assume_role", shape = "box"]
-		"[root] data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda" [label = "data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda", shape = "box"]
-		"[root] data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda (expand)" [label = "data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda", shape = "box"]
-		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs" [label = "data.aws_iam_policy_document.firehose_network_telemetry_logs", shape = "box"]
 		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs (expand)" [label = "data.aws_iam_policy_document.firehose_network_telemetry_logs", shape = "box"]
+		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs[0]" [label = "data.aws_iam_policy_document.firehose_network_telemetry_logs", shape = "box"]
 		"[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_logs (expand)" [label = "data.aws_iam_policy_document.lambda_firehose_network_telemetry_logs", shape = "box"]
-		"[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_processor_assume_role (expand)" [label = "data.aws_iam_policy_document.lambda_firehose_network_telemetry_processor_assume_role", shape = "box"]
-		"[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_s3_etl (expand)" [label = "data.aws_iam_policy_document.lambda_firehose_network_telemetry_s3_etl", shape = "box"]
-		"[root] data.aws_iam_policy_document.rds_app_alb_logs" [label = "data.aws_iam_policy_document.rds_app_alb_logs", shape = "box"]
 		"[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)" [label = "data.aws_iam_policy_document.rds_app_alb_logs", shape = "box"]
+		"[root] data.aws_iam_policy_document.rds_app_alb_logs[0]" [label = "data.aws_iam_policy_document.rds_app_alb_logs", shape = "box"]
 		"[root] data.aws_iam_policy_document.rds_app_assume_role (expand)" [label = "data.aws_iam_policy_document.rds_app_assume_role", shape = "box"]
 		"[root] data.aws_iam_policy_document.rds_enhanced_monitoring_assume_role (expand)" [label = "data.aws_iam_policy_document.rds_enhanced_monitoring_assume_role", shape = "box"]
 		"[root] data.aws_iam_policy_document.rds_enhanced_monitoring_role (expand)" [label = "data.aws_iam_policy_document.rds_enhanced_monitoring_role", shape = "box"]
@@ -317,10 +298,9 @@ digraph {
 		"[root] data.aws_iam_policy_document.vpc_flow_log_assume_role (expand)" [label = "data.aws_iam_policy_document.vpc_flow_log_assume_role", shape = "box"]
 		"[root] data.aws_iam_policy_document.vpc_flow_log_role" [label = "data.aws_iam_policy_document.vpc_flow_log_role", shape = "box"]
 		"[root] data.aws_iam_policy_document.vpc_flow_log_role (expand)" [label = "data.aws_iam_policy_document.vpc_flow_log_role", shape = "box"]
-		"[root] data.aws_iam_policy_document.waf_direct" [label = "data.aws_iam_policy_document.waf_direct", shape = "box"]
 		"[root] data.aws_iam_policy_document.waf_direct (expand)" [label = "data.aws_iam_policy_document.waf_direct", shape = "box"]
-		"[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy" [label = "data.aws_iam_policy_document.waf_firehose_logs_bucket_policy", shape = "box"]
 		"[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy (expand)" [label = "data.aws_iam_policy_document.waf_firehose_logs_bucket_policy", shape = "box"]
+		"[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy[0]" [label = "data.aws_iam_policy_document.waf_firehose_logs_bucket_policy", shape = "box"]
 		"[root] data.aws_route53_zone.rds_app_zone (expand)" [label = "data.aws_route53_zone.rds_app_zone", shape = "box"]
 		"[root] local_file.asg_user_data" [label = "local_file.asg_user_data", shape = "box"]
 		"[root] local_file.asg_user_data (expand)" [label = "local_file.asg_user_data", shape = "box"]
@@ -328,7 +308,6 @@ digraph {
 		"[root] local_file.cloudwatch_agent_config (expand)" [label = "local_file.cloudwatch_agent_config", shape = "box"]
 		"[root] local_file.ec2_user_data" [label = "local_file.ec2_user_data", shape = "box"]
 		"[root] local_file.ec2_user_data (expand)" [label = "local_file.ec2_user_data", shape = "box"]
-		"[root] provider[\"registry.terraform.io/hashicorp/archive\"]" [label = "provider[\"registry.terraform.io/hashicorp/archive\"]", shape = "diamond"]
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
 		"[root] provider[\"registry.terraform.io/hashicorp/local\"]" [label = "provider[\"registry.terraform.io/hashicorp/local\"]", shape = "diamond"]
 		"[root] provider[\"registry.terraform.io/hashicorp/random\"]" [label = "provider[\"registry.terraform.io/hashicorp/random\"]", shape = "diamond"]
@@ -346,9 +325,11 @@ digraph {
 		"[root] var.enable_direct_service_log_delivery" [label = "var.enable_direct_service_log_delivery", shape = "note"]
 		"[root] var.enable_waf_sampled_requests_only" [label = "var.enable_waf_sampled_requests_only", shape = "note"]
 		"[root] var.env" [label = "var.env", shape = "note"]
+		"[root] var.manage_route53_in_terraform" [label = "var.manage_route53_in_terraform", shape = "note"]
 		"[root] var.region_choice" [label = "var.region_choice", shape = "note"]
 		"[root] var.region_map" [label = "var.region_map", shape = "note"]
 		"[root] var.root_domain" [label = "var.root_domain", shape = "note"]
+		"[root] var.route53_private_zone" [label = "var.route53_private_zone", shape = "note"]
 		"[root] var.vpc_cidr" [label = "var.vpc_cidr", shape = "note"]
 		"[root] var.waf_log_destination" [label = "var.waf_log_destination", shape = "note"]
 		"[root] var.waf_log_retention_days" [label = "var.waf_log_retention_days", shape = "note"]
@@ -374,7 +355,6 @@ digraph {
 		"[root] aws_autoscaling_policy.rds_app_asg" -> "[root] aws_autoscaling_policy.rds_app_asg (expand)"
 		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_autoscaling_group.rds_app_asg"
 		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure"
-		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm"
 		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure"
 		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_db_instance.lab_mysql"
 		"[root] aws_cloudwatch_dashboard.rds_app_dashboard (expand)" -> "[root] aws_lb.rds_app_public_alb"
@@ -386,20 +366,27 @@ digraph {
 		"[root] aws_cloudwatch_log_group.vpc_flow_log (expand)" -> "[root] local.name_suffix (expand)"
 		"[root] aws_cloudwatch_log_group.vpc_flow_log (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
 		"[root] aws_cloudwatch_log_group.vpc_flow_log" -> "[root] aws_cloudwatch_log_group.vpc_flow_log (expand)"
+		"[root] aws_cloudwatch_log_group.waf_firehose_logs (expand)" -> "[root] local.bucket_suffix (expand)"
+		"[root] aws_cloudwatch_log_group.waf_firehose_logs (expand)" -> "[root] local.waf_log_mode (expand)"
+		"[root] aws_cloudwatch_log_group.waf_firehose_logs (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_cloudwatch_log_group.waf_firehose_logs[0]" -> "[root] aws_cloudwatch_log_group.waf_firehose_logs (expand)"
+		"[root] aws_cloudwatch_log_group.waf_logs (expand)" -> "[root] local.bucket_suffix (expand)"
+		"[root] aws_cloudwatch_log_group.waf_logs (expand)" -> "[root] local.waf_log_mode (expand)"
 		"[root] aws_cloudwatch_log_group.waf_logs (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
-		"[root] aws_cloudwatch_log_group.waf_logs" -> "[root] aws_cloudwatch_log_group.waf_logs (expand)"
 		"[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure (expand)" -> "[root] aws_db_instance.lab_mysql"
 		"[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure" -> "[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure (expand)"
-		"[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error (expand)" -> "[root] aws_cloudwatch_log_group.rds_app_alb_server_error"
-		"[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error" -> "[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error (expand)"
 		"[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure (expand)" -> "[root] aws_cloudwatch_log_group.vpc_flow_log"
 		"[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure" -> "[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure (expand)"
-		"[root] aws_cloudwatch_log_resource_policy.waf_direct (expand)" -> "[root] data.aws_iam_policy_document.waf_direct"
+		"[root] aws_cloudwatch_log_resource_policy.waf_direct (expand)" -> "[root] data.aws_iam_policy_document.waf_direct (expand)"
 		"[root] aws_cloudwatch_log_resource_policy.waf_direct (expand)" -> "[root] var.enable_direct_service_log_delivery"
 		"[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure (expand)" -> "[root] aws_sns_topic.lab_mysql_auth_failure_alert"
 		"[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure" -> "[root] aws_cloudwatch_metric_alarm.alarm_lab_mysql_auth_failure (expand)"
 		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm (expand)" -> "[root] aws_sns_topic.rds_app_alb_server_error_alert"
 		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm" -> "[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm (expand)"
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm (expand)" -> "[root] aws_lb.rds_app_public_alb"
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm (expand)" -> "[root] aws_lb_target_group.rds_app_asg_tg"
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm (expand)" -> "[root] aws_sns_topic.rds_app_alb_server_error_alert"
+		"[root] aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm" -> "[root] aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm (expand)"
 		"[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure (expand)" -> "[root] aws_sns_topic.app_to_rds_connection_failure_alert"
 		"[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure" -> "[root] aws_cloudwatch_metric_alarm.rds_app_to_lab_mysql_connection_failure (expand)"
 		"[root] aws_db_event_subscription.rds_failure_events (expand)" -> "[root] aws_db_instance.lab_mysql"
@@ -425,14 +412,10 @@ digraph {
 		"[root] aws_iam_policy.ec2_cloudwatch_agent_role" -> "[root] aws_iam_policy.ec2_cloudwatch_agent_role (expand)"
 		"[root] aws_iam_policy.ec2_linux_repo_access (expand)" -> "[root] data.aws_iam_policy_document.ec2_linux_repo_access (expand)"
 		"[root] aws_iam_policy.ec2_linux_repo_access" -> "[root] aws_iam_policy.ec2_linux_repo_access (expand)"
-		"[root] aws_iam_policy.firehose_network_telemetry_invoke_lambda (expand)" -> "[root] data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda"
-		"[root] aws_iam_policy.firehose_network_telemetry_invoke_lambda" -> "[root] aws_iam_policy.firehose_network_telemetry_invoke_lambda (expand)"
-		"[root] aws_iam_policy.firehose_network_telemetry_logs (expand)" -> "[root] data.aws_iam_policy_document.firehose_network_telemetry_logs"
-		"[root] aws_iam_policy.firehose_network_telemetry_logs" -> "[root] aws_iam_policy.firehose_network_telemetry_logs (expand)"
+		"[root] aws_iam_policy.firehose_network_telemetry_logs (expand)" -> "[root] data.aws_iam_policy_document.firehose_network_telemetry_logs[0]"
+		"[root] aws_iam_policy.firehose_network_telemetry_logs[0]" -> "[root] aws_iam_policy.firehose_network_telemetry_logs (expand)"
 		"[root] aws_iam_policy.lambda_firehose_network_telemetry_logs (expand)" -> "[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_logs (expand)"
 		"[root] aws_iam_policy.lambda_firehose_network_telemetry_logs" -> "[root] aws_iam_policy.lambda_firehose_network_telemetry_logs (expand)"
-		"[root] aws_iam_policy.lambda_firehose_network_telemetry_s3_etl (expand)" -> "[root] data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda"
-		"[root] aws_iam_policy.lambda_firehose_network_telemetry_s3_etl" -> "[root] aws_iam_policy.lambda_firehose_network_telemetry_s3_etl (expand)"
 		"[root] aws_iam_policy.rds_enhanced_monitoring_role (expand)" -> "[root] data.aws_iam_policy_document.rds_enhanced_monitoring_role (expand)"
 		"[root] aws_iam_policy.rds_enhanced_monitoring_role (expand)" -> "[root] local.name_suffix (expand)"
 		"[root] aws_iam_policy.rds_enhanced_monitoring_role" -> "[root] aws_iam_policy.rds_enhanced_monitoring_role (expand)"
@@ -453,9 +436,7 @@ digraph {
 		"[root] aws_iam_policy.vpc_flow_log_role (expand)" -> "[root] data.aws_iam_policy_document.vpc_flow_log_role"
 		"[root] aws_iam_policy.vpc_flow_log_role" -> "[root] aws_iam_policy.vpc_flow_log_role (expand)"
 		"[root] aws_iam_role.firehose_network_telemetry_role (expand)" -> "[root] data.aws_iam_policy_document.firehose_network_telemetry_assume_role (expand)"
-		"[root] aws_iam_role.firehose_network_telemetry_role" -> "[root] aws_iam_role.firehose_network_telemetry_role (expand)"
-		"[root] aws_iam_role.lambda_firehose_network_telemetry_processor_role (expand)" -> "[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_processor_assume_role (expand)"
-		"[root] aws_iam_role.lambda_firehose_network_telemetry_processor_role" -> "[root] aws_iam_role.lambda_firehose_network_telemetry_processor_role (expand)"
+		"[root] aws_iam_role.firehose_network_telemetry_role[0]" -> "[root] aws_iam_role.firehose_network_telemetry_role (expand)"
 		"[root] aws_iam_role.rds_app (expand)" -> "[root] data.aws_iam_policy_document.rds_app_assume_role (expand)"
 		"[root] aws_iam_role.rds_app (expand)" -> "[root] local.name_suffix (expand)"
 		"[root] aws_iam_role.rds_app" -> "[root] aws_iam_role.rds_app (expand)"
@@ -471,17 +452,9 @@ digraph {
 		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role (expand)" -> "[root] aws_iam_policy.ec2_cloudwatch_agent_role"
 		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role (expand)" -> "[root] aws_iam_role.rds_app"
 		"[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role" -> "[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role (expand)"
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda (expand)" -> "[root] aws_iam_policy.firehose_network_telemetry_invoke_lambda"
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda (expand)" -> "[root] aws_iam_role.firehose_network_telemetry_role"
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda" -> "[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda (expand)"
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs (expand)" -> "[root] aws_iam_policy.firehose_network_telemetry_logs"
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs (expand)" -> "[root] aws_iam_role.firehose_network_telemetry_role"
-		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs" -> "[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs (expand)"
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs (expand)" -> "[root] aws_iam_policy.lambda_firehose_network_telemetry_logs"
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs (expand)" -> "[root] aws_iam_role.lambda_firehose_network_telemetry_processor_role"
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs" -> "[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs (expand)"
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_s3_etl (expand)" -> "[root] aws_iam_policy.lambda_firehose_network_telemetry_s3_etl"
-		"[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_s3_etl" -> "[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_s3_etl (expand)"
+		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs (expand)" -> "[root] aws_iam_policy.firehose_network_telemetry_logs[0]"
+		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs (expand)" -> "[root] aws_iam_role.firehose_network_telemetry_role[0]"
+		"[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs[0]" -> "[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs (expand)"
 		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config (expand)" -> "[root] aws_iam_policy.read_cloudwatch_agent_config"
 		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config (expand)" -> "[root] aws_iam_role.rds_app"
 		"[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config" -> "[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config (expand)"
@@ -511,16 +484,9 @@ digraph {
 		"[root] aws_iam_role_policy_attachment.ec2_linux_repo_access" -> "[root] aws_iam_role_policy_attachment.ec2_linux_repo_access (expand)"
 		"[root] aws_internet_gateway.main (expand)" -> "[root] aws_vpc.main"
 		"[root] aws_internet_gateway.main" -> "[root] aws_internet_gateway.main (expand)"
-		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)" -> "[root] aws_cloudwatch_log_group.waf_logs"
-		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)" -> "[root] aws_iam_role.firehose_network_telemetry_role"
-		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)" -> "[root] aws_lambda_function.lambda_firehose_network_telemetry_processor"
-		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)" -> "[root] aws_s3_bucket.waf_firehose_logs"
-		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry" -> "[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)"
-		"[root] aws_lambda_function.lambda_firehose_network_telemetry_processor (expand)" -> "[root] aws_iam_role.lambda_firehose_network_telemetry_processor_role"
-		"[root] aws_lambda_function.lambda_firehose_network_telemetry_processor (expand)" -> "[root] data.archive_file.lambda_firehose_processor (expand)"
-		"[root] aws_lambda_function.lambda_firehose_network_telemetry_processor" -> "[root] aws_lambda_function.lambda_firehose_network_telemetry_processor (expand)"
-		"[root] aws_lambda_permission.allow_firehose_invoke (expand)" -> "[root] aws_kinesis_firehose_delivery_stream.network_telemetry"
-		"[root] aws_lambda_permission.allow_firehose_invoke" -> "[root] aws_lambda_permission.allow_firehose_invoke (expand)"
+		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)" -> "[root] aws_iam_role.firehose_network_telemetry_role[0]"
+		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)" -> "[root] aws_s3_bucket.waf_firehose_logs[0]"
+		"[root] aws_kinesis_firehose_delivery_stream.network_telemetry[0]" -> "[root] aws_kinesis_firehose_delivery_stream.network_telemetry (expand)"
 		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_instance_profile.rds_app"
 		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_role_policy_attachment.attach_read_db_host_parameter"
 		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_iam_role_policy_attachment.attach_read_db_name_parameter"
@@ -530,11 +496,10 @@ digraph {
 		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] aws_security_group.rds_app_asg"
 		"[root] aws_launch_template.rds_app_asg (expand)" -> "[root] local.rds_app_user_data (expand)"
 		"[root] aws_launch_template.rds_app_asg" -> "[root] aws_launch_template.rds_app_asg (expand)"
-		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket"
+		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket[0]"
 		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] aws_security_group.alb"
 		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] local.public_subnets (expand)"
 		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] var.alb_access_logs_prefix"
-		"[root] aws_lb.rds_app_public_alb (expand)" -> "[root] var.enable_alb_access_logs"
 		"[root] aws_lb.rds_app_public_alb" -> "[root] aws_lb.rds_app_public_alb (expand)"
 		"[root] aws_lb_listener.rds_app_http_80 (expand)" -> "[root] aws_lb.rds_app_public_alb"
 		"[root] aws_lb_listener.rds_app_http_80" -> "[root] aws_lb_listener.rds_app_http_80 (expand)"
@@ -555,6 +520,9 @@ digraph {
 		"[root] aws_route53_record.rds_app_cert_validation (expand)" -> "[root] data.aws_route53_zone.rds_app_zone (expand)"
 		"[root] aws_route53_record.rds_app_cert_validation[\"*.kirkdevsecops.com\"]" -> "[root] aws_route53_record.rds_app_cert_validation (expand)"
 		"[root] aws_route53_record.rds_app_cert_validation[\"kirkdevsecops.com\"]" -> "[root] aws_route53_record.rds_app_cert_validation (expand)"
+		"[root] aws_route53_zone.terraform_managed_zone (expand)" -> "[root] local.root_domain (expand)"
+		"[root] aws_route53_zone.terraform_managed_zone (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_route53_zone.terraform_managed_zone (expand)" -> "[root] var.manage_route53_in_terraform"
 		"[root] aws_route_table.local (expand)" -> "[root] aws_vpc.main"
 		"[root] aws_route_table.local" -> "[root] aws_route_table.local (expand)"
 		"[root] aws_route_table.public (expand)" -> "[root] aws_internet_gateway.main"
@@ -586,23 +554,25 @@ digraph {
 		"[root] aws_route_table_association.public_c (expand)" -> "[root] aws_route_table.public"
 		"[root] aws_route_table_association.public_c (expand)" -> "[root] local.public_subnets (expand)"
 		"[root] aws_route_table_association.public_c" -> "[root] aws_route_table_association.public_c (expand)"
+		"[root] aws_s3_bucket.alb_logs_bucket (expand)" -> "[root] local.alb_log_mode (expand)"
 		"[root] aws_s3_bucket.alb_logs_bucket (expand)" -> "[root] local.bucket_suffix (expand)"
 		"[root] aws_s3_bucket.alb_logs_bucket (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
-		"[root] aws_s3_bucket.alb_logs_bucket" -> "[root] aws_s3_bucket.alb_logs_bucket (expand)"
+		"[root] aws_s3_bucket.alb_logs_bucket[0]" -> "[root] aws_s3_bucket.alb_logs_bucket (expand)"
 		"[root] aws_s3_bucket.waf_firehose_logs (expand)" -> "[root] local.bucket_suffix (expand)"
+		"[root] aws_s3_bucket.waf_firehose_logs (expand)" -> "[root] local.waf_log_mode (expand)"
 		"[root] aws_s3_bucket.waf_firehose_logs (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
-		"[root] aws_s3_bucket.waf_firehose_logs" -> "[root] aws_s3_bucket.waf_firehose_logs (expand)"
+		"[root] aws_s3_bucket.waf_firehose_logs[0]" -> "[root] aws_s3_bucket.waf_firehose_logs (expand)"
 		"[root] aws_s3_bucket.waf_logs_bucket (expand)" -> "[root] local.bucket_suffix (expand)"
 		"[root] aws_s3_bucket.waf_logs_bucket (expand)" -> "[root] local.waf_log_mode (expand)"
 		"[root] aws_s3_bucket.waf_logs_bucket (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
-		"[root] aws_s3_bucket_policy.rds_app_alb_logs (expand)" -> "[root] data.aws_iam_policy_document.rds_app_alb_logs"
-		"[root] aws_s3_bucket_policy.rds_app_alb_logs" -> "[root] aws_s3_bucket_policy.rds_app_alb_logs (expand)"
-		"[root] aws_s3_bucket_policy.waf_firehose_logs (expand)" -> "[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy"
-		"[root] aws_s3_bucket_policy.waf_firehose_logs" -> "[root] aws_s3_bucket_policy.waf_firehose_logs (expand)"
-		"[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket"
-		"[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket" -> "[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket (expand)"
-		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket"
-		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs" -> "[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs (expand)"
+		"[root] aws_s3_bucket_policy.rds_app_alb_logs (expand)" -> "[root] data.aws_iam_policy_document.rds_app_alb_logs[0]"
+		"[root] aws_s3_bucket_policy.rds_app_alb_logs[0]" -> "[root] aws_s3_bucket_policy.rds_app_alb_logs (expand)"
+		"[root] aws_s3_bucket_policy.waf_firehose_logs (expand)" -> "[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy[0]"
+		"[root] aws_s3_bucket_policy.waf_firehose_logs[0]" -> "[root] aws_s3_bucket_policy.waf_firehose_logs (expand)"
+		"[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket[0]"
+		"[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket[0]" -> "[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket (expand)"
+		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs (expand)" -> "[root] aws_s3_bucket.waf_firehose_logs[0]"
+		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs[0]" -> "[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs (expand)"
 		"[root] aws_s3_bucket_server_side_encryption_configuration.waf_logs_bucket (expand)" -> "[root] aws_s3_bucket.waf_logs_bucket (expand)"
 		"[root] aws_secretsmanager_secret.lab_rds_mysql (expand)" -> "[root] local.name_suffix (expand)"
 		"[root] aws_secretsmanager_secret.lab_rds_mysql (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
@@ -752,7 +722,6 @@ digraph {
 		"[root] aws_wafv2_web_acl_logging_configuration.rds_app_waf_firehose (expand)" -> "[root] local.waf_log_destination_arn (expand)"
 		"[root] aws_wafv2_web_acl_logging_configuration.rds_app_waf_firehose[0]" -> "[root] aws_wafv2_web_acl_logging_configuration.rds_app_waf_firehose (expand)"
 		"[root] check.waf_log_mode_validation_check (expand)" -> "[root] local.waf_log_mode_valid (expand)"
-		"[root] data.archive_file.lambda_firehose_processor (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/archive\"]"
 		"[root] data.aws_ami.amazon_linux_2023 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
 		"[root] data.aws_availability_zones.available (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
 		"[root] data.aws_caller_identity.current (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
@@ -760,18 +729,15 @@ digraph {
 		"[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role (expand)" -> "[root] local.name_suffix (expand)"
 		"[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role" -> "[root] data.aws_iam_policy_document.ec2_cloudwatch_agent_role (expand)"
 		"[root] data.aws_iam_policy_document.ec2_linux_repo_access (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_iam_policy_document.firehose_network_telemetry_assume_role (expand)" -> "[root] local.waf_log_mode (expand)"
 		"[root] data.aws_iam_policy_document.firehose_network_telemetry_assume_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
-		"[root] data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda (expand)" -> "[root] aws_lambda_function.lambda_firehose_network_telemetry_processor"
-		"[root] data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda" -> "[root] data.aws_iam_policy_document.firehose_network_telemetry_invoke_lambda (expand)"
-		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs (expand)" -> "[root] aws_cloudwatch_log_group.waf_logs"
-		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs (expand)" -> "[root] local.bucket_suffix (expand)"
-		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs" -> "[root] data.aws_iam_policy_document.firehose_network_telemetry_logs (expand)"
+		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs (expand)" -> "[root] aws_cloudwatch_log_group.waf_firehose_logs[0]"
+		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs (expand)" -> "[root] aws_s3_bucket.waf_firehose_logs[0]"
+		"[root] data.aws_iam_policy_document.firehose_network_telemetry_logs[0]" -> "[root] data.aws_iam_policy_document.firehose_network_telemetry_logs (expand)"
 		"[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_logs (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
-		"[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_processor_assume_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
-		"[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_s3_etl (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
-		"[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket"
+		"[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket[0]"
 		"[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)" -> "[root] var.alb_access_logs_prefix"
-		"[root] data.aws_iam_policy_document.rds_app_alb_logs" -> "[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)"
+		"[root] data.aws_iam_policy_document.rds_app_alb_logs[0]" -> "[root] data.aws_iam_policy_document.rds_app_alb_logs (expand)"
 		"[root] data.aws_iam_policy_document.rds_app_assume_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
 		"[root] data.aws_iam_policy_document.rds_enhanced_monitoring_assume_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
 		"[root] data.aws_iam_policy_document.rds_enhanced_monitoring_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
@@ -796,15 +762,15 @@ digraph {
 		"[root] data.aws_iam_policy_document.vpc_flow_log_assume_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
 		"[root] data.aws_iam_policy_document.vpc_flow_log_role (expand)" -> "[root] aws_cloudwatch_log_group.vpc_flow_log"
 		"[root] data.aws_iam_policy_document.vpc_flow_log_role" -> "[root] data.aws_iam_policy_document.vpc_flow_log_role (expand)"
-		"[root] data.aws_iam_policy_document.waf_direct (expand)" -> "[root] aws_cloudwatch_log_group.waf_logs"
+		"[root] data.aws_iam_policy_document.waf_direct (expand)" -> "[root] aws_cloudwatch_log_group.waf_logs (expand)"
 		"[root] data.aws_iam_policy_document.waf_direct (expand)" -> "[root] local.account_id (expand)"
-		"[root] data.aws_iam_policy_document.waf_direct" -> "[root] data.aws_iam_policy_document.waf_direct (expand)"
-		"[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy (expand)" -> "[root] aws_s3_bucket.waf_firehose_logs"
+		"[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy (expand)" -> "[root] aws_s3_bucket.waf_firehose_logs[0]"
 		"[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy (expand)" -> "[root] local.account_id (expand)"
-		"[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy" -> "[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy (expand)"
+		"[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy[0]" -> "[root] data.aws_iam_policy_document.waf_firehose_logs_bucket_policy (expand)"
 		"[root] data.aws_route53_zone.rds_app_zone (expand)" -> "[root] local.root_domain (expand)"
 		"[root] data.aws_route53_zone.rds_app_zone (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
 		"[root] local.account_id (expand)" -> "[root] data.aws_caller_identity.current (expand)"
+		"[root] local.alb_log_mode (expand)" -> "[root] var.enable_alb_access_logs"
 		"[root] local.alb_sg_id (expand)" -> "[root] aws_security_group.alb"
 		"[root] local.app (expand)" -> "[root] var.app"
 		"[root] local.app_subdomain (expand)" -> "[root] var.app"
@@ -848,10 +814,13 @@ digraph {
 		"[root] local.region (expand)" -> "[root] var.region_choice (validation)"
 		"[root] local.region (expand)" -> "[root] var.region_map"
 		"[root] local.root_domain (expand)" -> "[root] var.root_domain"
+		"[root] local.route53_zone_id (expand)" -> "[root] aws_route53_zone.terraform_managed_zone (expand)"
+		"[root] local.route53_zone_id (expand)" -> "[root] data.aws_route53_zone.rds_app_zone (expand)"
 		"[root] local.secret_id (expand)" -> "[root] aws_secretsmanager_secret.lab_rds_mysql"
 		"[root] local.subnet_index (expand)" -> "[root] random_integer.subnet_picker"
 		"[root] local.vpc_cidr (expand)" -> "[root] var.vpc_cidr"
-		"[root] local.waf_log_destination_arn (expand)" -> "[root] aws_kinesis_firehose_delivery_stream.network_telemetry"
+		"[root] local.waf_log_destination_arn (expand)" -> "[root] aws_cloudwatch_log_group.waf_logs (expand)"
+		"[root] local.waf_log_destination_arn (expand)" -> "[root] aws_kinesis_firehose_delivery_stream.network_telemetry[0]"
 		"[root] local.waf_log_destination_arn (expand)" -> "[root] aws_s3_bucket.waf_logs_bucket (expand)"
 		"[root] local.waf_log_mode (expand)" -> "[root] local.waf_log_modes (expand)"
 		"[root] local.waf_log_mode (expand)" -> "[root] var.waf_log_destination (validation)"
@@ -871,6 +840,13 @@ digraph {
 		"[root] output.application_url (expand)" -> "[root] local.fqdn (expand)"
 		"[root] output.availability_zones (expand)" -> "[root] data.aws_availability_zones.available (expand)"
 		"[root] output.environment (expand)" -> "[root] local.env (expand)"
+		"[root] output.logging_info (expand)" -> "[root] aws_cloudwatch_log_group.vpc_flow_log"
+		"[root] output.logging_info (expand)" -> "[root] aws_cloudwatch_log_group.waf_firehose_logs[0]"
+		"[root] output.logging_info (expand)" -> "[root] aws_cloudwatch_log_group.waf_logs (expand)"
+		"[root] output.logging_info (expand)" -> "[root] aws_kinesis_firehose_delivery_stream.network_telemetry[0]"
+		"[root] output.logging_info (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket[0]"
+		"[root] output.logging_info (expand)" -> "[root] aws_s3_bucket.waf_logs_bucket (expand)"
+		"[root] output.logging_info (expand)" -> "[root] var.alb_access_logs_prefix"
 		"[root] output.rds_app_alb (expand)" -> "[root] aws_route53_record.rds_app_alias"
 		"[root] output.rds_info (expand)" -> "[root] aws_db_instance.lab_mysql"
 		"[root] output.rds_subnets (expand)" -> "[root] aws_db_subnet_group.lab_mysql"
@@ -879,33 +855,30 @@ digraph {
 		"[root] output.route53_zone (expand)" -> "[root] data.aws_route53_zone.rds_app_zone (expand)"
 		"[root] output.vpc_info (expand)" -> "[root] aws_vpc.main"
 		"[root] output.waf_info (expand)" -> "[root] aws_wafv2_web_acl.rds_app"
-		"[root] output.waf_log_destinations (expand)" -> "[root] aws_kinesis_firehose_delivery_stream.network_telemetry"
-		"[root] output.waf_log_destinations (expand)" -> "[root] aws_s3_bucket.alb_logs_bucket"
-		"[root] provider[\"registry.terraform.io/hashicorp/archive\"] (close)" -> "[root] data.archive_file.lambda_firehose_processor (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_autoscaling_attachment.rds_app_asg_tg_attachment"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_autoscaling_policy.rds_app_asg"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_dashboard.rds_app_dashboard"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_group.rds_app_alb_server_error"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_metric_filter.lab_mysql_auth_failure"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_metric_filter.rds_app_alb_server_error"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_metric_filter.rds_app_to_lab_mysql_connection_failure"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_resource_policy.waf_direct (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_metric_alarm.rds_app_alb_target_5xx_alarm"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_db_event_subscription.rds_failure_events"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_flow_log.vpc"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_policy.lambda_firehose_network_telemetry_logs"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_ec2_cloudwatch_agent_role"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_invoke_lambda"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_logs"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_lambda_firehose_network_telemetry_s3_etl"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_firehose_network_telemetry_logs[0]"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_read_cloudwatch_agent_config"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_ssm_agent_policy"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.attach_vpc_flow_log_assume_role"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy_attachment.ec2_linux_repo_access"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_lambda_permission.allow_firehose_invoke"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_lb_listener.rds_app_http_80"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_lb_listener.rds_app_https_443"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route53_record.rds_app_alias"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route53_record.rds_app_apex_alias"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route53_zone.terraform_managed_zone (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_a"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_b"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_c"
@@ -915,10 +888,10 @@ digraph {
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_a"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_b"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_c"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_policy.rds_app_alb_logs"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_policy.waf_firehose_logs"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_policy.rds_app_alb_logs[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_policy.waf_firehose_logs[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_server_side_encryption_configuration.alb_logs_bucket[0]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_server_side_encryption_configuration.waf_firehose_logs[0]"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_server_side_encryption_configuration.waf_logs_bucket (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_secretsmanager_secret_version.lab_rds_mysql"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_sns_topic_subscription.app_alb_server_error_email_alert"
@@ -947,7 +920,6 @@ digraph {
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_wafv2_web_acl_logging_configuration.rds_app_waf_direct (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_wafv2_web_acl_logging_configuration.rds_app_waf_firehose[0]"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] data.aws_iam_policy_document.lambda_firehose_network_telemetry_s3_etl (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] local.app (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] local.env (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] local.region (expand)"
@@ -978,12 +950,14 @@ digraph {
 		"[root] root" -> "[root] local.random_private_data_subnet (expand)"
 		"[root] root" -> "[root] local.random_public_subnet (expand)"
 		"[root] root" -> "[root] local.rds_app_asg_sg_id (expand)"
+		"[root] root" -> "[root] local.route53_zone_id (expand)"
 		"[root] root" -> "[root] local.vpc_endpoint_tags (expand)"
 		"[root] root" -> "[root] output.alb_listeners (expand)"
 		"[root] root" -> "[root] output.application_name (expand)"
 		"[root] root" -> "[root] output.application_url (expand)"
 		"[root] root" -> "[root] output.availability_zones (expand)"
 		"[root] root" -> "[root] output.environment (expand)"
+		"[root] root" -> "[root] output.logging_info (expand)"
 		"[root] root" -> "[root] output.rds_app_alb (expand)"
 		"[root] root" -> "[root] output.rds_info (expand)"
 		"[root] root" -> "[root] output.rds_subnets (expand)"
@@ -992,12 +966,11 @@ digraph {
 		"[root] root" -> "[root] output.route53_zone (expand)"
 		"[root] root" -> "[root] output.vpc_info (expand)"
 		"[root] root" -> "[root] output.waf_info (expand)"
-		"[root] root" -> "[root] output.waf_log_destinations (expand)"
-		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/archive\"] (close)"
 		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
 		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)"
 		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/random\"] (close)"
 		"[root] root" -> "[root] var.enable_waf_sampled_requests_only"
+		"[root] root" -> "[root] var.route53_private_zone"
 		"[root] root" -> "[root] var.waf_log_retention_days"
 		"[root] var.env (validation)" -> "[root] var.env"
 		"[root] var.region_choice (validation)" -> "[root] var.region_choice"

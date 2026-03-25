@@ -169,15 +169,44 @@ resource "aws_cloudwatch_dashboard" "rds_app_dashboard" {
 
       ## ========== ALARMS ==========
       {
-        type   = "alarm"
-        x      = 0
-        y      = 12
+        type   = "metric"
+        x      = 8
+        y      = 6
         width  = 8
         height = 6
 
         properties = {
-          title  = "ALB Server Errors"
-          alarms = [aws_cloudwatch_metric_alarm.rds_app_alb_server_error_alarm.arn]
+          title = "ALB 5xx Errors (Target vs Infra)"
+
+          metrics = [
+            [
+              "AWS/ApplicationELB",
+              "HTTPCode_Target_5XX_Count",
+              "LoadBalancer",
+              aws_lb.rds_app_public_alb.arn_suffix,
+              "TargetGroup",
+              aws_lb_target_group.rds_app_asg_tg.arn_suffix,
+              {
+                stat  = "Sum",
+                label = "Target 5xx (App)"
+              }
+            ],
+            [
+              ".",
+              "HTTPCode_ELB_5XX_Count",
+              "LoadBalancer",
+              aws_lb.rds_app_public_alb.arn_suffix,
+              {
+                stat  = "Sum",
+                label = "ELB 5xx (Infra)"
+              }
+            ]
+          ]
+
+          region  = local.region
+          period  = 60
+          view    = "timeSeries"
+          stacked = false
         }
       },
       {

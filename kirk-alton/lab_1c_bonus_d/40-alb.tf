@@ -19,7 +19,7 @@ resource "aws_lb" "rds_app_public_alb" {
   tags = {
     Name        = "rds-app-alb"
     Component   = "load-balancing"
-    Environment = "${local.environment}"
+    Environment = "${local.env}"
     Service     = "post-notes"
   }
 }

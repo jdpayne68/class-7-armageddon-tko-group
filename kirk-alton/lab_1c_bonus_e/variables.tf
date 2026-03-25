@@ -1,13 +1,17 @@
+# Input VPC CIDR Block
 variable "vpc_cidr" {
   type    = string
   default = "10.10.0.0/16"
 }
+
+# Input Application Name
 variable "app" {
   type        = string
   description = "Application name (short)"
   default     = "rds-app"
 }
 
+# Input Environment
 variable "env" {
   type        = string
   default     = "dev"
@@ -19,6 +23,7 @@ variable "env" {
   }
 }
 
+# Input Region Choice
 variable "region_choice" {
   type        = string
   default     = "2" # Defaults region to us-west-2
@@ -37,6 +42,7 @@ EOT
   }
 }
 
+# Map Region Choice to Corresponding String
 variable "region_map" {
   type = map(string)
   default = {
@@ -49,24 +55,42 @@ variable "region_map" {
   }
 }
 
+# Toggle Route 53 in Terraform
+variable "manage_route53_in_terraform" {
+  description = "If true, create/manage Route53 hosted zone and records in Terraform."
+  type        = bool
+  default     = false
+}
+
+# Toggle Private Route 53 Zone
+variable "route53_private_zone" {
+  type        = bool
+  description = "If true, the Route53 hosted zone is private."
+  default     = false
+}
+
+# Input Root Domain (Apex)
 variable "root_domain" {
   type        = string
   description = "Root DNS name (no subdomain)"
   default     = "kirkdevsecops.com"
 }
 
+# Toggle ALB Access Logs
 variable "enable_alb_access_logs" {
   type        = bool
   default     = true
-  description = "Enable ALB access logging to S3."
+  description = "If true, enable ALB access logging to S3."
 }
 
+# Input ALB Access Logs Prefix
 variable "alb_access_logs_prefix" {
   type        = string
   description = "S3 prefix for ALB access logs (NO leading or trailing slash)"
   default     = "alb-access-logs"
 }
 
+# Input WAF Log Destination
 variable "waf_log_destination" {
   type        = string
   description = "Where AWS WAF delivers logs: cloudwatch | s3 | firehose"
@@ -79,18 +103,21 @@ variable "waf_log_destination" {
 }
 
 
+# Input WAF Log Retention Period
 variable "waf_log_retention_days" {
   type        = number
   description = "Retention period for WAF CloudWatch log group (days)."
   default     = 14
 }
 
+# Toggle WAF Sampled Requests Only
 variable "enable_waf_sampled_requests_only" {
   type        = bool
   default     = false
   description = "If true, use sampled request visibility only (lower cost). If false, allows a full WAF logging design to be introduced later."
 }
 
+# Toggle Direct Service Log Delivery
 variable "enable_direct_service_log_delivery" {
   type        = bool
   description = "Whether AWS services deliver logs directly to CloudWatch Logs (requires resource policy)."

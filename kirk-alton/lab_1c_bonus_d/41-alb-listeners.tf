@@ -9,7 +9,7 @@ resource "aws_lb_listener" "rds_app_http_80" {
   tags = {
     Name        = "rds-app-http-80-listener"
     Component   = "load-balancing"
-    Environment = "${local.environment}"
+    Environment = "${local.env}"
     Service     = "post-notes"
   }
   default_action {
@@ -38,7 +38,7 @@ resource "aws_lb_listener" "rds_app_https_443" {
   tags = {
     Name        = "rds-app-https-443-listener"
     Component   = "load-balancing"
-    Environment = "${local.environment}"
+    Environment = "${local.env}"
     Service     = "post-notes"
   }
   default_action {

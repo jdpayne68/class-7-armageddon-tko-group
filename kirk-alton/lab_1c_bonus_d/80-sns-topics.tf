@@ -4,8 +4,8 @@ resource "aws_sns_topic" "rds_failure_alert" {
 
   tags = {
     Name        = "rds-failure-alert"
-    App         = "${local.application}"
-    Environment = "${local.environment}"
+    App         = "${local.app}"
+    Environment = "${local.env}"
     Component   = "alert-db"
     Scope       = "monitoring-availability"
     Severity    = "high"
@@ -25,8 +25,8 @@ resource "aws_sns_topic" "app_to_rds_connection_failure_alert" {
 
   tags = {
     Name        = "app-to-rds-connection-failure-alert"
-    App         = "${local.application}"
-    Environment = "${local.environment}"
+    App         = "${local.app}"
+    Environment = "${local.env}"
     Component   = "alert-db"
     Scope       = "monitoring-connectivity"
     Severity    = "medium"
@@ -46,8 +46,8 @@ resource "aws_sns_topic" "lab_mysql_auth_failure_alert" {
 
   tags = {
     Name        = "lab-mysql-auth-failure-alert"
-    App         = "${local.application}"
-    Environment = "${local.environment}"
+    App         = "${local.app}"
+    Environment = "${local.env}"
     Component   = "alert-db"
     Scope       = "monitoring-login"
     Severity    = "medium"
@@ -67,8 +67,8 @@ resource "aws_sns_topic" "rds_app_alb_server_error_alert" {
 
   tags = {
     Name        = "rds-app-alb-server-error-alert"
-    App         = "${local.application}"
-    Environment = "${local.environment}"
+    App         = "${local.app}"
+    Environment = "${local.env}"
     Component   = "alert-alb"
     Scope       = "monitoring-backend"
     Severity    = "high"

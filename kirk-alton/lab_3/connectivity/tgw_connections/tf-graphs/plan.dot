@@ -1,0 +1,98 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] data.aws_caller_identity.current (expand)" [label = "data.aws_caller_identity.current", shape = "box"]
+		"[root] data.terraform_remote_state.saopaulo (expand)" [label = "data.terraform_remote_state.saopaulo", shape = "box"]
+		"[root] data.terraform_remote_state.tokyo (expand)" [label = "data.terraform_remote_state.tokyo", shape = "box"]
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" [label = "module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request", shape = "box"]
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment_accepter.tgw_peering_accept (expand)" [label = "module.tgw_peering.aws_ec2_transit_gateway_peering_attachment_accepter.tgw_peering_accept", shape = "box"]
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_peer (expand)" [label = "module.tgw_peering.aws_ec2_transit_gateway_route.route_to_peer", shape = "box"]
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_source (expand)" [label = "module.tgw_peering.aws_ec2_transit_gateway_route.route_to_source", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"].saopaulo" [label = "provider[\"registry.terraform.io/hashicorp/aws\"].saopaulo", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"].tokyo" [label = "provider[\"registry.terraform.io/hashicorp/aws\"].tokyo", shape = "diamond"]
+		"[root] provider[\"terraform.io/builtin/terraform\"]" [label = "provider[\"terraform.io/builtin/terraform\"]", shape = "diamond"]
+		"[root] var.app" [label = "var.app", shape = "note"]
+		"[root] var.env" [label = "var.env", shape = "note"]
+		"[root] var.peer_region" [label = "var.peer_region", shape = "note"]
+		"[root] var.source_region" [label = "var.source_region", shape = "note"]
+		"[root] data.aws_caller_identity.current (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.terraform_remote_state.saopaulo (expand)" -> "[root] provider[\"terraform.io/builtin/terraform\"]"
+		"[root] data.terraform_remote_state.tokyo (expand)" -> "[root] provider[\"terraform.io/builtin/terraform\"]"
+		"[root] local.account_id (expand)" -> "[root] data.aws_caller_identity.current (expand)"
+		"[root] local.base_tags (expand)" -> "[root] local.normalized_app (expand)"
+		"[root] local.base_tags (expand)" -> "[root] local.normalized_env (expand)"
+		"[root] local.base_tags (expand)" -> "[root] local.peering_name (expand)"
+		"[root] local.context (expand)" -> "[root] local.base_tags (expand)"
+		"[root] local.name_prefix (expand)" -> "[root] local.context (expand)"
+		"[root] local.name_suffix (expand)" -> "[root] local.context (expand)"
+		"[root] local.normalized_app (expand)" -> "[root] var.app"
+		"[root] local.normalized_env (expand)" -> "[root] var.env (validation)"
+		"[root] local.peering_name (expand)" -> "[root] var.peer_region"
+		"[root] local.peering_name (expand)" -> "[root] var.source_region"
+		"[root] module.tgw_peering (close)" -> "[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_peer (expand)"
+		"[root] module.tgw_peering (close)" -> "[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_source (expand)"
+		"[root] module.tgw_peering (close)" -> "[root] module.tgw_peering.output.tgw_peering_attachment_id (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" -> "[root] module.tgw_peering.var.context (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" -> "[root] module.tgw_peering.var.name_prefix (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" -> "[root] module.tgw_peering.var.name_suffix (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" -> "[root] module.tgw_peering.var.peer_region (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" -> "[root] module.tgw_peering.var.peer_tgw_id (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" -> "[root] module.tgw_peering.var.peering_name (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" -> "[root] module.tgw_peering.var.source_tgw_id (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"].tokyo"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment_accepter.tgw_peering_accept (expand)" -> "[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment_accepter.tgw_peering_accept (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"].saopaulo"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_peer (expand)" -> "[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment_accepter.tgw_peering_accept (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_peer (expand)" -> "[root] module.tgw_peering.var.peer_vpc_cidr (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_peer (expand)" -> "[root] module.tgw_peering.var.source_route_table_id (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_source (expand)" -> "[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment_accepter.tgw_peering_accept (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_source (expand)" -> "[root] module.tgw_peering.var.peer_route_table_id (expand)"
+		"[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_source (expand)" -> "[root] module.tgw_peering.var.source_vpc_cidr (expand)"
+		"[root] module.tgw_peering.output.tgw_peering_attachment_id (expand)" -> "[root] module.tgw_peering.aws_ec2_transit_gateway_peering_attachment.tgw_peering_request (expand)"
+		"[root] module.tgw_peering.var.context (expand)" -> "[root] local.context (expand)"
+		"[root] module.tgw_peering.var.context (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.name_prefix (expand)" -> "[root] local.name_prefix (expand)"
+		"[root] module.tgw_peering.var.name_prefix (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.name_suffix (expand)" -> "[root] local.name_suffix (expand)"
+		"[root] module.tgw_peering.var.name_suffix (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.peer_region (expand)" -> "[root] data.terraform_remote_state.saopaulo (expand)"
+		"[root] module.tgw_peering.var.peer_region (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.peer_route_table_id (expand)" -> "[root] data.terraform_remote_state.saopaulo (expand)"
+		"[root] module.tgw_peering.var.peer_route_table_id (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.peer_tgw_id (expand)" -> "[root] data.terraform_remote_state.saopaulo (expand)"
+		"[root] module.tgw_peering.var.peer_tgw_id (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.peer_vpc_cidr (expand)" -> "[root] data.terraform_remote_state.saopaulo (expand)"
+		"[root] module.tgw_peering.var.peer_vpc_cidr (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.peering_name (expand)" -> "[root] local.peering_name (expand)"
+		"[root] module.tgw_peering.var.peering_name (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.source_route_table_id (expand)" -> "[root] data.terraform_remote_state.tokyo (expand)"
+		"[root] module.tgw_peering.var.source_route_table_id (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.source_tgw_id (expand)" -> "[root] data.terraform_remote_state.tokyo (expand)"
+		"[root] module.tgw_peering.var.source_tgw_id (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] module.tgw_peering.var.source_vpc_cidr (expand)" -> "[root] data.terraform_remote_state.tokyo (expand)"
+		"[root] module.tgw_peering.var.source_vpc_cidr (expand)" -> "[root] module.tgw_peering (expand)"
+		"[root] output.connection_context (expand)" -> "[root] local.context (expand)"
+		"[root] output.peering_name (expand)" -> "[root] local.peering_name (expand)"
+		"[root] output.regions (expand)" -> "[root] var.peer_region"
+		"[root] output.regions (expand)" -> "[root] var.source_region"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] data.aws_caller_identity.current (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"].saopaulo (close)" -> "[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_source (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"].saopaulo" -> "[root] local.context (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"].tokyo (close)" -> "[root] module.tgw_peering.aws_ec2_transit_gateway_route.route_to_peer (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"].tokyo" -> "[root] local.context (expand)"
+		"[root] provider[\"terraform.io/builtin/terraform\"] (close)" -> "[root] data.terraform_remote_state.saopaulo (expand)"
+		"[root] provider[\"terraform.io/builtin/terraform\"] (close)" -> "[root] data.terraform_remote_state.tokyo (expand)"
+		"[root] root" -> "[root] local.account_id (expand)"
+		"[root] root" -> "[root] module.tgw_peering (close)"
+		"[root] root" -> "[root] output.connection_context (expand)"
+		"[root] root" -> "[root] output.peering_name (expand)"
+		"[root] root" -> "[root] output.regions (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"].saopaulo (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"].tokyo (close)"
+		"[root] root" -> "[root] provider[\"terraform.io/builtin/terraform\"] (close)"
+		"[root] var.env (validation)" -> "[root] var.env"
+	}
+}

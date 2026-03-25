@@ -6,8 +6,8 @@ locals {
   vpc_cidr = var.vpc_cidr
 
   # Environment setup
-  environment = lower(var.env)
-  application = var.application
+  env = lower(var.env)
+  app = var.application
 
   # Route53
   root_domain   = var.root_domain
@@ -20,11 +20,11 @@ locals {
 
   # Base Tags
   base_tags = {
-    Environment = "${local.environment}"
+    Environment = "${local.env}"
   }
 
   # Naming helpers
-  name_prefix   = "${local.application}-${local.environment}"
+  name_prefix   = "${local.app}-${local.env}"
   name_suffix   = lower(random_string.suffix.result)
   bucket_suffix = random_id.bucket_suffix.hex
 

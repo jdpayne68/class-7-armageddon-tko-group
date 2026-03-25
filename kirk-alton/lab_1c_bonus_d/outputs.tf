@@ -5,7 +5,7 @@ output "application_name" {
 
 output "environment" {
   description = "Environment"
-  value       = local.environment
+  value       = local.env
 }
 
 output "region_choice" {
@@ -91,7 +91,7 @@ output "rds_app_alb" {
   description = "ALB Information"
 
   value = {
-    application = local.application
+    application = local.app
     name        = aws_lb.rds_app_public_alb.name
     dns_name    = aws_lb.rds_app_public_alb.dns_name
     zone_id     = aws_lb.rds_app_public_alb.zone_id

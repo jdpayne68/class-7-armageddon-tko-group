@@ -29,8 +29,8 @@ resource "aws_db_instance" "lab_mysql" {
 
   tags = {
     Name        = "lab-mysql"
-    App         = "${local.application}"
-    Environment = "${local.environment}"
+    App         = "${local.app}"
+    Environment = "${local.env}"
     Service     = "post-notes"
     Component   = "data-db"
     Scope       = "backend"

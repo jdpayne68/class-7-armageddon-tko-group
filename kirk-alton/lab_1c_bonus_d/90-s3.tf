@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "terraform_bucket" {
     Name        = "terraform-managed-bucket"
     Component   = "storage"
     DataClass   = "internal"
-    Environment = "${local.environment}"
+    Environment = "${local.env}"
   }
 }
 # Server Side Encryption - Terraform Bucket

@@ -28,12 +28,30 @@ resource "aws_cloudwatch_log_group" "rds_app_alb_server_error" {
   }
 }
 
-# CWL Group - WAF Logs
+# Conditional CWL Group - WAF Logs
 resource "aws_cloudwatch_log_group" "waf_logs" {
-  name              = "aws-waf-logs-${local.env}-network-telemetry"
+  count = local.waf_log_mode.create_direct_resources ? 1 : 0
+
+  name              = "aws-waf-logs-${local.env}-${local.bucket_suffix}"
   retention_in_days = 1
   tags = {
     Name        = "waf-logs-network-telemetry"
+    App         = "${local.app}"
+    Environment = "${local.env}"
+    Component   = "logs-waf"
+    Scope       = "logging-security-edge"
+    DataClass   = "confidential"
+  }
+}
+
+# Firehose logging
+resource "aws_cloudwatch_log_group" "waf_firehose_logs" {
+  count = local.waf_log_mode.create_firehose_resources ? 1 : 0
+
+  name              = "aws-waf-logs-firehose-${local.env}-${local.bucket_suffix}"
+  retention_in_days = 1
+  tags = {
+    Name        = "waf-firehose-logs"
     App         = "${local.app}"
     Environment = "${local.env}"
     Component   = "logs-waf"

@@ -80,24 +80,8 @@ resource "aws_cloudwatch_metric_alarm" "alarm_lab_mysql_auth_failure" {
   }
 }
 
-# CloudWatch Alarm - RDS App ALB Server Error
 
-# Metric
 
-resource "aws_cloudwatch_log_metric_filter" "rds_app_alb_server_error" {
-  name           = "rds-app-alb-server"
-  log_group_name = aws_cloudwatch_log_group.rds_app_alb_server_error.name
-
-  pattern = <<PATTERN
-  [type, time, elb, client_port, target_port, request_processing_time, response_processing_time, elb_status_code="5$${*}", target_status_code, received_bytes, sent_bytes, request_line, user_agent, ssl_cipher, ssl_protocol, target_group_arn, trace_id, domain_name, chosen_cert_arn, matched_rule_priority, request_creation_time, actions_executed, redirect_url, error_reason, target_port_list, target_status_code_list, classification, classification_reason, conn_trace_id, transformed_host, transformed_uri, request_transform_status]
-  PATTERN
-
-  metric_transformation {
-    name      = "RdsAppAlbServerError"
-    namespace = "Custom/VPC"
-    value     = "1"
-  }
-}
 
 # Alarm - ALB 5xx Error Rate for RDS App
 resource "aws_cloudwatch_metric_alarm" "rds_app_alb_server_error_alarm" {
@@ -119,6 +103,43 @@ resource "aws_cloudwatch_metric_alarm" "rds_app_alb_server_error_alarm" {
     Name        = "rds-app-alb-server-error"
     App         = "${local.app}"
     Environment = "${local.env}"
+    Component   = "alarm-alb"
+    Scope       = "monitoring-backend"
+    Severity    = "high"
+  }
+}
+
+
+
+
+
+resource "aws_cloudwatch_metric_alarm" "rds_app_alb_target_5xx_alarm" {
+  alarm_name          = "rds-app-alb-target-5xx"
+  comparison_operator = "GreaterThanOrEqualToThreshold"
+
+  evaluation_periods = 2
+  period             = 60
+  threshold          = 5
+  statistic          = "Sum"
+
+  namespace   = "AWS/ApplicationELB"
+  metric_name = "HTTPCode_Target_5XX_Count"
+
+  dimensions = {
+    LoadBalancer = aws_lb.rds_app_public_alb.arn_suffix
+    TargetGroup  = aws_lb_target_group.rds_app_asg_tg.arn_suffix
+  }
+
+  alarm_description = "Triggers when RDS App targets return 5 or more 5xx errors in 2 minutes"
+
+  alarm_actions = [aws_sns_topic.rds_app_alb_server_error_alert.arn]
+
+  treat_missing_data = "notBreaching"
+
+  tags = {
+    Name        = "rds-app-alb-target-5xx"
+    App         = local.app
+    Environment = local.env
     Component   = "alarm-alb"
     Scope       = "monitoring-backend"
     Severity    = "high"

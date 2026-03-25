@@ -35,8 +35,8 @@ resource "aws_launch_template" "rds_app_asg" {
 
     tags = {
       Name        = "rds-app-asg-instance"
-      App         = "${local.application}"
-      Environment = "${local.environment}"
+      App         = "${local.app}"
+      Environment = "${local.env}"
       Service     = "post-notes"
       Component   = "compute-ec2"
       Scope       = "frontend"

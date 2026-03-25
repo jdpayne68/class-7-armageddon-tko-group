@@ -22,8 +22,8 @@ provider "aws" {
   default_tags {
     tags = {
       ManagedBy   = "terraform"
-      Environment = "${local.environment}"
-      Application = "${local.application}"
+      Environment = "${local.env}"
+      Application = "${local.app}"
     }
   }
 }
