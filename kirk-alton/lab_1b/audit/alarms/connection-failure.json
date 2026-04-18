@@ -1,0 +1,31 @@
+{
+    "MetricAlarms": [
+        {
+            "AlarmName": "public-app-to-lab-mysql-connection-failure",
+            "AlarmArn": "arn:aws:cloudwatch:us-west-2:167140820103:alarm:public-app-to-lab-mysql-connection-failure",
+            "AlarmDescription": "Triggers when EC2 to RDS REJECT traffic exceeds 20 in 10 minutes",
+            "AlarmConfigurationUpdatedTimestamp": "2026-01-20T20:51:16.678000-06:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [
+                "arn:aws:sns:us-west-2:167140820103:app-to-rds-connection-failure-alert"
+            ],
+            "InsufficientDataActions": [],
+            "StateValue": "ALARM",
+            "StateReason": "Threshold Crossed: 1 datapoint [43.0 (21/01/26 03:54:00)] was greater than the threshold (3.0).",
+            "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-01-21T03:55:50.321+0000\",\"startDate\":\"2026-01-21T03:54:00.000+0000\",\"statistic\":\"Sum\",\"period\":60,\"recentDatapoints\":[43.0],\"threshold\":3.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-01-21T03:54:00.000+0000\",\"sampleCount\":43.0,\"value\":43.0}]}",
+            "StateUpdatedTimestamp": "2026-01-20T21:55:50.323000-06:00",
+            "MetricName": "PublicAppToLabMySqlConnectionFailure",
+            "Namespace": "Custom/VPC",
+            "Statistic": "Sum",
+            "Dimensions": [],
+            "Period": 60,
+            "EvaluationPeriods": 1,
+            "Threshold": 3.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "missing",
+            "StateTransitionedTimestamp": "2026-01-20T21:55:50.323000-06:00"
+        }
+    ],
+    "CompositeAlarms": []
+}

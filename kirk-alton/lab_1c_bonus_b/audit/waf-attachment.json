@@ -1,0 +1,79 @@
+{
+    "WebACL": {
+        "Name": "web-acl-rds-app-suy0s",
+        "Id": "d2ee23f3-9b7c-4d26-a152-b8c69f7d61c3",
+        "ARN": "arn:aws:wafv2:us-west-2:167140820103:regional/webacl/web-acl-rds-app-suy0s/d2ee23f3-9b7c-4d26-a152-b8c69f7d61c3",
+        "DefaultAction": {
+            "Allow": {}
+        },
+        "Description": "Common WAF Web ACL for regional resources",
+        "Rules": [
+            {
+                "Name": "CommonRuleSet",
+                "Priority": 1,
+                "Statement": {
+                    "ManagedRuleGroupStatement": {
+                        "VendorName": "AWS",
+                        "Name": "AWSManagedRulesCommonRuleSet"
+                    }
+                },
+                "OverrideAction": {
+                    "None": {}
+                },
+                "VisibilityConfig": {
+                    "SampledRequestsEnabled": true,
+                    "CloudWatchMetricsEnabled": true,
+                    "MetricName": "common-rule-set"
+                }
+            },
+            {
+                "Name": "AdminProtectionRuleSet",
+                "Priority": 2,
+                "Statement": {
+                    "ManagedRuleGroupStatement": {
+                        "VendorName": "AWS",
+                        "Name": "AWSManagedRulesAdminProtectionRuleSet"
+                    }
+                },
+                "OverrideAction": {
+                    "None": {}
+                },
+                "VisibilityConfig": {
+                    "SampledRequestsEnabled": true,
+                    "CloudWatchMetricsEnabled": true,
+                    "MetricName": "admin-protection-rule-set"
+                }
+            },
+            {
+                "Name": "KnownBadInputsRuleSet",
+                "Priority": 3,
+                "Statement": {
+                    "ManagedRuleGroupStatement": {
+                        "VendorName": "AWS",
+                        "Name": "AWSManagedRulesKnownBadInputsRuleSet"
+                    }
+                },
+                "OverrideAction": {
+                    "None": {}
+                },
+                "VisibilityConfig": {
+                    "SampledRequestsEnabled": true,
+                    "CloudWatchMetricsEnabled": true,
+                    "MetricName": "known-bad-inputs-rule-set"
+                }
+            }
+        ],
+        "VisibilityConfig": {
+            "SampledRequestsEnabled": true,
+            "CloudWatchMetricsEnabled": true,
+            "MetricName": "waf-rds-app"
+        },
+        "Capacity": 1000,
+        "ManagedByFirewallManager": false,
+        "LabelNamespace": "awswaf:167140820103:webacl:web-acl-rds-app-suy0s:",
+        "RetrofittedByFirewallManager": false,
+        "OnSourceDDoSProtectionConfig": {
+            "ALBLowReputationMode": "ACTIVE_UNDER_DDOS"
+        }
+    }
+}

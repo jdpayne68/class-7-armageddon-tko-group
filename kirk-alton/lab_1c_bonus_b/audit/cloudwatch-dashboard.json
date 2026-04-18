@@ -1,0 +1,10 @@
+{
+    "DashboardEntries": [
+        {
+            "DashboardName": "rds-app-dashboard",
+            "DashboardArn": "arn:aws:cloudwatch::167140820103:dashboard/rds-app-dashboard",
+            "LastModified": "2026-02-04T17:29:29-06:00",
+            "Size": 2062
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "Name": "kirkdevsecops.com.",
+        "Type": "A",
+        "AliasTarget": {
+            "HostedZoneId": "Z1H1FL5HABSF5",
+            "DNSName": "rds-app-alb-36076753.us-west-2.elb.amazonaws.com.",
+            "EvaluateTargetHealth": true
+        }
+    },
+    {
+        "Name": "kirkdevsecops.com.",
+        "Type": "NS",
+        "TTL": 172800,
+        "ResourceRecords": [
+            {
+                "Value": "ns-132.awsdns-16.com."
+            },
+            {
+                "Value": "ns-1049.awsdns-03.org."
+            },
+            {
+                "Value": "ns-2030.awsdns-61.co.uk."
+            },
+            {
+                "Value": "ns-894.awsdns-47.net."
+            }
+        ]
+    },
+    {
+        "Name": "kirkdevsecops.com.",
+        "Type": "SOA",
+        "TTL": 900,
+        "ResourceRecords": [
+            {
+                "Value": "ns-132.awsdns-16.com. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"
+            }
+        ]
+    },
+    {
+        "Name": "kirkdevsecops.com.",
+        "Type": "TXT",
+        "TTL": 3600,
+        "ResourceRecords": [
+            {
+                "Value": "\"MS=ms74548419\""
+            }
+        ]
+    }
+]

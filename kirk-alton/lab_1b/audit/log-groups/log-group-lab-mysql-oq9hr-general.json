@@ -1,0 +1,14 @@
+{
+    "logGroups": [
+        {
+            "logGroupName": "/aws/rds/instance/lab-mysql-oq9hr/general",
+            "creationTime": 1768956451441,
+            "metricFilterCount": 0,
+            "arn": "arn:aws:logs:us-west-2:167140820103:log-group:/aws/rds/instance/lab-mysql-oq9hr/general:*",
+            "storedBytes": 0,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:us-west-2:167140820103:log-group:/aws/rds/instance/lab-mysql-oq9hr/general",
+            "deletionProtectionEnabled": false
+        }
+    ]
+}

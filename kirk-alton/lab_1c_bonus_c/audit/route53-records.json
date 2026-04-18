@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "rds-app.kirkdevsecops.com.",
+        "Type": "A",
+        "AliasTarget": {
+            "HostedZoneId": "Z1H1FL5HABSF5",
+            "DNSName": "rds-app-alb-36076753.us-west-2.elb.amazonaws.com.",
+            "EvaluateTargetHealth": true
+        }
+    }
+]

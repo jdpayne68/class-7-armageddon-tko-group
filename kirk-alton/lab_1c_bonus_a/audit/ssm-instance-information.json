@@ -1,0 +1,26 @@
+[
+    {
+        "InstanceId": "i-0c29d22651b66547c",
+        "PingStatus": "Online",
+        "LastPingDateTime": "2026-01-27T18:25:13.978000-06:00",
+        "AgentVersion": "3.3.3598.0",
+        "IsLatestVersion": true,
+        "PlatformType": "Linux",
+        "PlatformName": "Amazon Linux",
+        "PlatformVersion": "2023",
+        "ResourceType": "EC2Instance",
+        "IPAddress": "10.10.11.121",
+        "ComputerName": "ip-10-10-11-121.us-west-2.compute.internal",
+        "AssociationStatus": "Success",
+        "LastAssociationExecutionDate": "2026-01-27T18:19:18.685000-06:00",
+        "LastSuccessfulAssociationExecutionDate": "2026-01-27T18:19:18.685000-06:00",
+        "AssociationOverview": {
+            "DetailedStatus": "Success",
+            "InstanceAssociationStatusAggregatedCount": {
+                "Success": 1
+            }
+        },
+        "SourceId": "i-0c29d22651b66547c",
+        "SourceType": "AWS::EC2::Instance"
+    }
+]

@@ -1,0 +1,15 @@
+{
+    "logGroups": [
+        {
+            "logGroupName": "RDSOSMetrics",
+            "creationTime": 1768956512071,
+            "retentionInDays": 30,
+            "metricFilterCount": 0,
+            "arn": "arn:aws:logs:us-west-2:167140820103:log-group:RDSOSMetrics:*",
+            "storedBytes": 0,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:us-west-2:167140820103:log-group:RDSOSMetrics",
+            "deletionProtectionEnabled": false
+        }
+    ]
+}

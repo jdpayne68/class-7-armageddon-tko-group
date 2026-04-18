@@ -1,0 +1,8 @@
+{
+    "AttachedPolicies": [
+        {
+            "PolicyName": "read-specific-secret",
+            "PolicyArn": "arn:aws:iam::167140820103:policy/read-specific-secret"
+        }
+    ]
+}

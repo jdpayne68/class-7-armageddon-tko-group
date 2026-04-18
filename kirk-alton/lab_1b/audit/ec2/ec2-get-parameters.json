@@ -1,0 +1,32 @@
+{
+    "Parameters": [
+        {
+            "Name": "/lab/rds/mysql/db-name",
+            "Type": "String",
+            "Value": "lab-mysql-oq9hr",
+            "Version": 2,
+            "LastModifiedDate": "2026-01-20T19:07:36.086000-06:00",
+            "ARN": "arn:aws:ssm:us-west-2:167140820103:parameter/lab/rds/mysql/db-name",
+            "DataType": "text"
+        },
+        {
+            "Name": "/lab/rds/mysql/host",
+            "Type": "String",
+            "Value": "lab-mysql-oq9hr.cnqmy888qxgc.us-west-2.rds.amazonaws.com",
+            "Version": 1,
+            "LastModifiedDate": "2026-01-20T18:50:58.780000-06:00",
+            "ARN": "arn:aws:ssm:us-west-2:167140820103:parameter/lab/rds/mysql/host",
+            "DataType": "text"
+        },
+        {
+            "Name": "/lab/rds/mysql/port",
+            "Type": "String",
+            "Value": "3306",
+            "Version": 1,
+            "LastModifiedDate": "2026-01-20T18:50:58.816000-06:00",
+            "ARN": "arn:aws:ssm:us-west-2:167140820103:parameter/lab/rds/mysql/port",
+            "DataType": "text"
+        }
+    ],
+    "InvalidParameters": []
+}

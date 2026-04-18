@@ -1,0 +1,14 @@
+{
+    "logGroups": [
+        {
+            "logGroupName": "vpc-flow-log-oq9hr",
+            "creationTime": 1768956127615,
+            "metricFilterCount": 1,
+            "arn": "arn:aws:logs:us-west-2:167140820103:log-group:vpc-flow-log-oq9hr:*",
+            "storedBytes": 0,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:us-west-2:167140820103:log-group:vpc-flow-log-oq9hr",
+            "deletionProtectionEnabled": false
+        }
+    ]
+}

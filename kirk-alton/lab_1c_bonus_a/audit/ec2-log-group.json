@@ -1,0 +1,14 @@
+{
+    "logStreams": [
+        {
+            "logStreamName": "i-072f311eac7c242fd-agent",
+            "creationTime": 1769613568440,
+            "firstEventTimestamp": 1769612807414,
+            "lastEventTimestamp": 1769612812414,
+            "lastIngestionTime": 1769613598600,
+            "uploadSequenceToken": "49039859659928380448277768876443602354417500261456719590",
+            "arn": "arn:aws:logs:us-west-2:167140820103:log-group:/aws/ec2/cloudwatch-agent/rds-app-g9dha:log-stream:i-072f311eac7c242fd-agent",
+            "storedBytes": 0
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "MetricAlarms": [
+        {
+            "AlarmName": "alarm-lab-mysql-auth-failure",
+            "AlarmArn": "arn:aws:cloudwatch:us-west-2:167140820103:alarm:alarm-lab-mysql-auth-failure",
+            "AlarmDescription": "Triggers when MySQL db auth failures exceed 20 in 10 minutes",
+            "AlarmConfigurationUpdatedTimestamp": "2026-01-20T20:51:16.706000-06:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [
+                "arn:aws:sns:us-west-2:167140820103:lab-mysql-auth-failure-alert"
+            ],
+            "InsufficientDataActions": [],
+            "StateValue": "ALARM",
+            "StateReason": "Threshold Crossed: 1 datapoint [4.0 (21/01/26 03:11:00)] was greater than the threshold (3.0).",
+            "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-01-21T03:12:28.394+0000\",\"startDate\":\"2026-01-21T03:11:00.000+0000\",\"statistic\":\"Sum\",\"period\":60,\"recentDatapoints\":[4.0],\"threshold\":3.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-01-21T03:11:00.000+0000\",\"sampleCount\":4.0,\"value\":4.0}]}",
+            "StateUpdatedTimestamp": "2026-01-20T21:12:28.396000-06:00",
+            "MetricName": "MySQLAuthFailure",
+            "Namespace": "Custom/RDS",
+            "Statistic": "Sum",
+            "Dimensions": [],
+            "Period": 60,
+            "EvaluationPeriods": 1,
+            "Threshold": 3.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "missing",
+            "StateTransitionedTimestamp": "2026-01-20T21:12:28.396000-06:00"
+        }
+    ],
+    "CompositeAlarms": []
+}

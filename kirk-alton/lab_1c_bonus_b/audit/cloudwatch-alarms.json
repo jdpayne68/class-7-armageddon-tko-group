@@ -1,0 +1,55 @@
+{
+    "MetricAlarms": [
+        {
+            "AlarmName": "rds-app-alb-server-error",
+            "AlarmArn": "arn:aws:cloudwatch:us-west-2:167140820103:alarm:rds-app-alb-server-error",
+            "AlarmDescription": "Triggers when RDS App ALB returns 5 or more server errors in 2 minutes",
+            "AlarmConfigurationUpdatedTimestamp": "2026-02-04T17:29:27.140000-06:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [
+                "arn:aws:sns:us-west-2:167140820103:rds-app-alb-server-error-alert"
+            ],
+            "InsufficientDataActions": [],
+            "StateValue": "INSUFFICIENT_DATA",
+            "StateReason": "Unchecked: Initial alarm creation",
+            "StateUpdatedTimestamp": "2026-02-04T17:29:27.140000-06:00",
+            "MetricName": "RdsAppAlbServerError",
+            "Namespace": "Custom/VPC",
+            "Statistic": "Sum",
+            "Dimensions": [],
+            "Period": 60,
+            "EvaluationPeriods": 2,
+            "Threshold": 5.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "missing",
+            "StateTransitionedTimestamp": "2026-02-04T17:29:27.140000-06:00"
+        },
+        {
+            "AlarmName": "rds-app-to-lab-mysql-connection-failure",
+            "AlarmArn": "arn:aws:cloudwatch:us-west-2:167140820103:alarm:rds-app-to-lab-mysql-connection-failure",
+            "AlarmDescription": "Triggers when EC2 to RDS REJECT traffic exceeds 6 in 2 minutes",
+            "AlarmConfigurationUpdatedTimestamp": "2026-02-04T17:29:27.387000-06:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [
+                "arn:aws:sns:us-west-2:167140820103:app-to-rds-connection-failure-alert"
+            ],
+            "InsufficientDataActions": [],
+            "StateValue": "INSUFFICIENT_DATA",
+            "StateReason": "Unchecked: Initial alarm creation",
+            "StateUpdatedTimestamp": "2026-02-04T17:29:27.387000-06:00",
+            "MetricName": "RdsAppToLabMySqlConnectionFailure",
+            "Namespace": "Custom/VPC",
+            "Statistic": "Sum",
+            "Dimensions": [],
+            "Period": 60,
+            "EvaluationPeriods": 2,
+            "Threshold": 3.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "missing",
+            "StateTransitionedTimestamp": "2026-02-04T17:29:27.387000-06:00"
+        }
+    ],
+    "CompositeAlarms": []
+}
